@@ -390,9 +390,10 @@
 
     <!-- Service Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      
-      <!-- 1. Signature Haircut -->
-      <div class="card-luxury p-7 flex flex-col justify-between relative group">
+      <!-- BEGIN SERVICES_LIST -->
+      <!-- Service: Signature Haircut -->
+      <div class="card-luxury p-7 flex flex-col justify-between relative group ">
+        
         <div class="absolute top-4 right-4 text-xs font-semibold px-2.5 py-1 rounded-full bg-gray-800 text-gray-300 border border-gray-700">
           <i class="fa-regular fa-clock text-amber-400 mr-1"></i> 40 min
         </div>
@@ -402,26 +403,21 @@
           </div>
           <h3 class="text-xl font-bold text-white mb-2">Signature Haircut</h3>
           <p class="text-gray-400 text-xs leading-relaxed mb-4">
-            Tailored precision skin fade, drop fade, low taper, textured crop, or classic gentleman cut. Includes hot lather neck shave and premium matte styling product finish.
+            Tailored precision skin fade, drop fade, low taper, scissor crop, or classic cut. Includes hot lather neck lineup and styling.
           </p>
-          <ul class="text-xs text-gray-300 space-y-1.5 mb-6">
-            <li class="flex items-center"><i class="fa-solid fa-check text-amber-400 text-[10px] mr-2"></i> Custom fade & shear work</li>
-            <li class="flex items-center"><i class="fa-solid fa-check text-amber-400 text-[10px] mr-2"></i> Straight razor hairline lineup</li>
-            <li class="flex items-center"><i class="fa-solid fa-check text-amber-400 text-[10px] mr-2"></i> Hot towel & cooling tonic</li>
-          </ul>
         </div>
         <div class="pt-4 border-t border-gray-800/80 flex items-center justify-between">
           <div>
             <span class="text-2xl font-serif font-black text-amber-400">$40</span>
           </div>
           <button class="open-booking-trigger px-4 py-2 rounded-lg bg-dark-800 hover:bg-amber-400 hover:text-black border border-amber-400/40 text-amber-300 text-xs font-bold uppercase tracking-wider transition-all" data-service-key="haircut">
-            Book Cut
+            Book Now
           </button>
         </div>
       </div>
-
-      <!-- 2. Haircut & Beard Combo (Most Popular) -->
-      <div class="card-luxury p-7 flex flex-col justify-between relative group border-amber-400/50 bg-gradient-to-b from-dark-800 to-dark-850 shadow-xl shadow-amber-500/5">
+      <!-- Service: Haircut & Beard Sculpting -->
+      <div class="card-luxury p-7 flex flex-col justify-between relative group border-amber-400/50 bg-gradient-to-b from-dark-800 to-dark-850 shadow-xl">
+        
         <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 px-3 py-0.5 rounded-full bg-gradient-to-r from-amber-400 to-amber-600 text-dark-950 font-black text-[10px] uppercase tracking-widest shadow-md">
           ⭐ MOST POPULAR
         </div>
@@ -429,89 +425,26 @@
           <i class="fa-regular fa-clock text-amber-400 mr-1"></i> 55 min
         </div>
         <div>
-          <div class="w-12 h-12 rounded-xl bg-amber-400/20 border border-amber-400/40 flex items-center justify-center mb-5 text-amber-300 text-xl group-hover:scale-110 transition-transform">
+          <div class="w-12 h-12 rounded-xl bg-amber-400/10 border border-amber-400/30 flex items-center justify-center mb-5 text-amber-400 text-xl group-hover:scale-110 transition-transform">
             <i class="fa-solid fa-user-tie"></i>
           </div>
           <h3 class="text-xl font-bold text-white mb-2">Haircut & Beard Sculpting</h3>
           <p class="text-gray-400 text-xs leading-relaxed mb-4">
-            The full gentleman's transformation. Precision fade with seamless beard taper, length debulking, razor-sharp beard line shaping, and essential oil conditioning.
+            The crowd pleezer combo. Precision cut with beard trim, straight razor line shaping, hot towel, and nourishing beard oil.
           </p>
-          <ul class="text-xs text-gray-300 space-y-1.5 mb-6">
-            <li class="flex items-center"><i class="fa-solid fa-check text-amber-400 text-[10px] mr-2"></i> Custom haircut + skin fade</li>
-            <li class="flex items-center"><i class="fa-solid fa-check text-amber-400 text-[10px] mr-2"></i> Beard trim & razor cheek/neck lineup</li>
-            <li class="flex items-center"><i class="fa-solid fa-check text-amber-400 text-[10px] mr-2"></i> Hot towel & artisan beard butter</li>
-          </ul>
         </div>
         <div class="pt-4 border-t border-gray-800/80 flex items-center justify-between">
           <div>
-            <span class="text-2xl font-serif font-black text-amber-400">$50</span>
+            <span class="text-2xl font-serif font-black text-amber-400">$45</span>
           </div>
-          <button class="open-booking-trigger px-4 py-2 rounded-lg bg-amber-400 text-dark-950 hover:bg-amber-300 font-bold text-xs uppercase tracking-wider transition-all shadow-md shadow-amber-500/20" data-service-key="haircut-beard">
-            Book Combo
+          <button class="open-booking-trigger px-4 py-2 rounded-lg bg-dark-800 hover:bg-amber-400 hover:text-black border border-amber-400/40 text-amber-300 text-xs font-bold uppercase tracking-wider transition-all" data-service-key="haircut-beard">
+            Book Now
           </button>
         </div>
       </div>
-
-      <!-- 3. Beard Trim & Hot Towel -->
-      <div class="card-luxury p-7 flex flex-col justify-between relative group">
-        <div class="absolute top-4 right-4 text-xs font-semibold px-2.5 py-1 rounded-full bg-gray-800 text-gray-300 border border-gray-700">
-          <i class="fa-regular fa-clock text-amber-400 mr-1"></i> 25 min
-        </div>
-        <div>
-          <div class="w-12 h-12 rounded-xl bg-amber-400/10 border border-amber-400/30 flex items-center justify-center mb-5 text-amber-400 text-xl group-hover:scale-110 transition-transform">
-            <i class="fa-solid fa-feather-pointed"></i>
-          </div>
-          <h3 class="text-xl font-bold text-white mb-2">Beard Trim & Shape</h3>
-          <p class="text-gray-400 text-xs leading-relaxed mb-4">
-            Master beard detailing. Includes clipper debulking, scissor stray trimming, hot towel wrap, straight razor edging on cheeks & neckline, and luxury beard oil finish.
-          </p>
-          <ul class="text-xs text-gray-300 space-y-1.5 mb-6">
-            <li class="flex items-center"><i class="fa-solid fa-check text-amber-400 text-[10px] mr-2"></i> Freehand shape & symmetry balance</li>
-            <li class="flex items-center"><i class="fa-solid fa-check text-amber-400 text-[10px] mr-2"></i> Straight razor razor-sharp lines</li>
-            <li class="flex items-center"><i class="fa-solid fa-check text-amber-400 text-[10px] mr-2"></i> Invigorating hot towel treatment</li>
-          </ul>
-        </div>
-        <div class="pt-4 border-t border-gray-800/80 flex items-center justify-between">
-          <div>
-            <span class="text-2xl font-serif font-black text-amber-400">$20</span>
-          </div>
-          <button class="open-booking-trigger px-4 py-2 rounded-lg bg-dark-800 hover:bg-amber-400 hover:text-black border border-amber-400/40 text-amber-300 text-xs font-bold uppercase tracking-wider transition-all" data-service-key="beard-trim">
-            Book Beard
-          </button>
-        </div>
-      </div>
-
-      <!-- 4. Kid's Haircut -->
-      <div class="card-luxury p-7 flex flex-col justify-between relative group">
-        <div class="absolute top-4 right-4 text-xs font-semibold px-2.5 py-1 rounded-full bg-gray-800 text-gray-300 border border-gray-700">
-          <i class="fa-regular fa-clock text-amber-400 mr-1"></i> 35 min
-        </div>
-        <div>
-          <div class="w-12 h-12 rounded-xl bg-amber-400/10 border border-amber-400/30 flex items-center justify-center mb-5 text-amber-400 text-xl group-hover:scale-110 transition-transform">
-            <i class="fa-solid fa-child"></i>
-          </div>
-          <h3 class="text-xl font-bold text-white mb-2">Kid's Precision Cut</h3>
-          <p class="text-gray-400 text-xs leading-relaxed mb-4">
-            Ages 12 & under. Patient, skilled, and stylish haircut tailored for youngsters. Back-to-school fresh fades, tapers, or classic scissor cuts with a welcoming touch.
-          </p>
-          <ul class="text-xs text-gray-300 space-y-1.5 mb-6">
-            <li class="flex items-center"><i class="fa-solid fa-check text-amber-400 text-[10px] mr-2"></i> Patient, kid-friendly environment</li>
-            <li class="flex items-center"><i class="fa-solid fa-check text-amber-400 text-[10px] mr-2"></i> Sharp hairline & clean blend</li>
-            <li class="flex items-center"><i class="fa-solid fa-check text-amber-400 text-[10px] mr-2"></i> Styling gel & lollipop finish</li>
-          </ul>
-        </div>
-        <div class="pt-4 border-t border-gray-800/80 flex items-center justify-between">
-          <div>
-            <span class="text-2xl font-serif font-black text-amber-400">$40</span>
-          </div>
-          <button class="open-booking-trigger px-4 py-2 rounded-lg bg-dark-800 hover:bg-amber-400 hover:text-black border border-amber-400/40 text-amber-300 text-xs font-bold uppercase tracking-wider transition-all" data-service-key="kids-cut">
-            Book Kid's Cut
-          </button>
-        </div>
-      </div>
-
-      <!-- 5. Line Up & Neck Taper -->
-      <div class="card-luxury p-7 flex flex-col justify-between relative group">
+      <!-- Service: Razor Edge Lineup -->
+      <div class="card-luxury p-7 flex flex-col justify-between relative group ">
+        
         <div class="absolute top-4 right-4 text-xs font-semibold px-2.5 py-1 rounded-full bg-gray-800 text-gray-300 border border-gray-700">
           <i class="fa-regular fa-clock text-amber-400 mr-1"></i> 20 min
         </div>
@@ -519,57 +452,93 @@
           <div class="w-12 h-12 rounded-xl bg-amber-400/10 border border-amber-400/30 flex items-center justify-center mb-5 text-amber-400 text-xl group-hover:scale-110 transition-transform">
             <i class="fa-solid fa-wand-magic-sparkles"></i>
           </div>
-          <h3 class="text-xl font-bold text-white mb-2">Line Up & Neck Clean</h3>
+          <h3 class="text-xl font-bold text-white mb-2">Razor Edge Lineup</h3>
           <p class="text-gray-400 text-xs leading-relaxed mb-4">
-            Quick mid-week tune-up to keep your hairline laser-crisp between full haircuts. Includes forehead shape-up, temple clean, and neck taper clean.
+            Quick neckline and hairline cleaning. Sharp edging on temples and sideburns with a hot lather razor touchup.
           </p>
-          <ul class="text-xs text-gray-300 space-y-1.5 mb-6">
-            <li class="flex items-center"><i class="fa-solid fa-check text-amber-400 text-[10px] mr-2"></i> Laser-straight hairline</li>
-            <li class="flex items-center"><i class="fa-solid fa-check text-amber-400 text-[10px] mr-2"></i> Straight razor detail finish</li>
-            <li class="flex items-center"><i class="fa-solid fa-check text-amber-400 text-[10px] mr-2"></i> Aftershave soothing spray</li>
-          </ul>
         </div>
         <div class="pt-4 border-t border-gray-800/80 flex items-center justify-between">
           <div>
             <span class="text-2xl font-serif font-black text-amber-400">$20</span>
           </div>
           <button class="open-booking-trigger px-4 py-2 rounded-lg bg-dark-800 hover:bg-amber-400 hover:text-black border border-amber-400/40 text-amber-300 text-xs font-bold uppercase tracking-wider transition-all" data-service-key="lineup">
-            Book Line Up
+            Book Now
           </button>
         </div>
       </div>
-
-      <!-- 6. VIP Total Experience (Royal Treatment) -->
-      <div class="card-luxury p-7 flex flex-col justify-between relative group border-amber-500/60 bg-gradient-to-br from-dark-800 via-dark-850 to-amber-950/20">
-        <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 px-3 py-0.5 rounded-full bg-gradient-to-r from-amber-300 to-amber-500 text-dark-950 font-black text-[10px] uppercase tracking-widest shadow-md">
-          👑 VIP ROYALTY
-        </div>
+      <!-- Service: Kid's Precision Cut -->
+      <div class="card-luxury p-7 flex flex-col justify-between relative group ">
+        
         <div class="absolute top-4 right-4 text-xs font-semibold px-2.5 py-1 rounded-full bg-gray-800 text-gray-300 border border-gray-700">
-          <i class="fa-regular fa-clock text-amber-400 mr-1"></i> 75 min
+          <i class="fa-regular fa-clock text-amber-400 mr-1"></i> 30 min
         </div>
         <div>
-          <div class="w-12 h-12 rounded-xl bg-amber-400/20 border border-amber-400/50 flex items-center justify-center mb-5 text-amber-300 text-xl group-hover:scale-110 transition-transform">
+          <div class="w-12 h-12 rounded-xl bg-amber-400/10 border border-amber-400/30 flex items-center justify-center mb-5 text-amber-400 text-xl group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-child"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Kid's Precision Cut</h3>
+          <p class="text-gray-400 text-xs leading-relaxed mb-4">
+            Patient, friendly styling for children ages 12 & under. Cool tapers, skin fades, or scissor crops.
+          </p>
+        </div>
+        <div class="pt-4 border-t border-gray-800/80 flex items-center justify-between">
+          <div>
+            <span class="text-2xl font-serif font-black text-amber-400">$30</span>
+          </div>
+          <button class="open-booking-trigger px-4 py-2 rounded-lg bg-dark-800 hover:bg-amber-400 hover:text-black border border-amber-400/40 text-amber-300 text-xs font-bold uppercase tracking-wider transition-all" data-service-key="kids-cut">
+            Book Now
+          </button>
+        </div>
+      </div>
+      <!-- Service: Senior Gentleman Cut -->
+      <div class="card-luxury p-7 flex flex-col justify-between relative group ">
+        
+        <div class="absolute top-4 right-4 text-xs font-semibold px-2.5 py-1 rounded-full bg-gray-800 text-gray-300 border border-gray-700">
+          <i class="fa-regular fa-clock text-amber-400 mr-1"></i> 30 min
+        </div>
+        <div>
+          <div class="w-12 h-12 rounded-xl bg-amber-400/10 border border-amber-400/30 flex items-center justify-center mb-5 text-amber-400 text-xl group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-user-clock"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Senior Gentleman Cut</h3>
+          <p class="text-gray-400 text-xs leading-relaxed mb-4">
+            Classic scissor cut, trim, and clean neckline feathering for seniors 65 & over.
+          </p>
+        </div>
+        <div class="pt-4 border-t border-gray-800/80 flex items-center justify-between">
+          <div>
+            <span class="text-2xl font-serif font-black text-amber-400">$30</span>
+          </div>
+          <button class="open-booking-trigger px-4 py-2 rounded-lg bg-dark-800 hover:bg-amber-400 hover:text-black border border-amber-400/40 text-amber-300 text-xs font-bold uppercase tracking-wider transition-all" data-service-key="senior-cut">
+            Book Now
+          </button>
+        </div>
+      </div>
+      <!-- Service: Braids & Locs Styling -->
+      <div class="card-luxury p-7 flex flex-col justify-between relative group ">
+        
+        <div class="absolute top-4 right-4 text-xs font-semibold px-2.5 py-1 rounded-full bg-gray-800 text-gray-300 border border-gray-700">
+          <i class="fa-regular fa-clock text-amber-400 mr-1"></i> 90 min
+        </div>
+        <div>
+          <div class="w-12 h-12 rounded-xl bg-amber-400/10 border border-amber-400/30 flex items-center justify-center mb-5 text-amber-400 text-xl group-hover:scale-110 transition-transform">
             <i class="fa-solid fa-crown"></i>
           </div>
-          <h3 class="text-xl font-bold text-white mb-2">The Royal VIP Treatment</h3>
+          <h3 class="text-xl font-bold text-white mb-2">Braids & Locs Styling</h3>
           <p class="text-gray-400 text-xs leading-relaxed mb-4">
-            The ultimate Vegas grooming ritual. Full haircut & skin fade, beard sculpting, double essential hot towel wrap, straight razor shave, eucalyptus facial massage & scalp rejuvenation.
+            Professional braiding, cornrows, box braids, or starter locs/retwists. Handled by our specialist stylists.
           </p>
-          <ul class="text-xs text-gray-300 space-y-1.5 mb-6">
-            <li class="flex items-center"><i class="fa-solid fa-check text-amber-400 text-[10px] mr-2"></i> Complete haircut & beard styling</li>
-            <li class="flex items-center"><i class="fa-solid fa-check text-amber-400 text-[10px] mr-2"></i> Double hot towel aromatherapy</li>
-            <li class="flex items-center"><i class="fa-solid fa-check text-amber-400 text-[10px] mr-2"></i> Complimentary cold beverage</li>
-          </ul>
         </div>
         <div class="pt-4 border-t border-gray-800/80 flex items-center justify-between">
           <div>
             <span class="text-2xl font-serif font-black text-amber-400">$65</span>
           </div>
-          <button class="open-booking-trigger px-4 py-2 rounded-lg bg-gradient-to-r from-amber-400 to-amber-500 text-dark-950 font-bold text-xs uppercase tracking-wider hover:brightness-110 transition-all shadow-md shadow-amber-500/20" data-service-key="vip-treatment">
-            Book Royal VIP
+          <button class="open-booking-trigger px-4 py-2 rounded-lg bg-dark-800 hover:bg-amber-400 hover:text-black border border-amber-400/40 text-amber-300 text-xs font-bold uppercase tracking-wider transition-all" data-service-key="braids-locs">
+            Book Now
           </button>
         </div>
       </div>
+      <!-- END SERVICES_LIST -->
 
     </div>
 
@@ -808,20 +777,116 @@
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      
-      <!-- Barber 1: Daniel (Co-Owner & Master Barber) -->
+      <!-- BEGIN BARBERS_LIST -->
+      <!-- Barber: Mir The Barber -->
       <div class="card-luxury overflow-hidden flex flex-col justify-between group">
         <div class="relative h-64 overflow-hidden bg-dark-950">
-          <img src="assets/images/barber-master.jpg" alt="Daniel - Co-Owner & Master Barber" class="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-500">
+          <img src="assets/images/barber-master.jpg" alt="Mir The Barber - Master Barber & Shop Lead" class="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-500">
           <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>
           <div class="absolute top-3 left-3">
             <span class="px-2.5 py-1 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 text-dark-950 font-black text-[9px] uppercase tracking-wider shadow-md">
-              👑 CO-OWNER
+              👑 👑 MASTER BARBER / TOP RATED
             </span>
           </div>
           <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between">
             <span class="px-2 py-0.5 rounded bg-dark-950/80 text-amber-300 text-[10px] font-bold border border-amber-400/30">
-              Shop Top Cut
+              8+ Years Craftsmanship
+            </span>
+            <span class="text-[10px] text-gray-300 bg-dark-950/80 px-2 py-0.5 rounded border border-gray-700">
+              Master Barber & Shop Lead
+            </span>
+          </div>
+        </div>
+        <div class="p-5 flex flex-col flex-1 justify-between">
+          <div>
+            <h3 class="text-lg font-bold text-white mb-0.5">Mir The Barber</h3>
+            <p class="text-[11px] text-amber-400 font-semibold mb-2">Master Barber & Shop Lead</p>
+            <p class="text-xs text-gray-400 leading-relaxed mb-4">
+              Known for surgical precision and flawless blending on all hair textures. Specializes in precision skin fades, high tapers, beard sculpting & razor finishes.
+            </p>
+          </div>
+          <button class="open-booking-trigger w-full py-2.5 rounded-lg bg-dark-800 hover:bg-amber-400 hover:text-black border border-amber-400/40 text-amber-300 text-xs font-bold uppercase tracking-wider transition-all" data-barber-name="Mir The Barber">
+            Book With Mir
+          </button>
+        </div>
+      </div>
+      <!-- Barber: Major Fadez -->
+      <div class="card-luxury overflow-hidden flex flex-col justify-between group">
+        <div class="relative h-64 overflow-hidden bg-dark-950">
+          <img src="assets/images/fade-textured.jpg" alt="Major Fadez - Fade Specialist & Stylist" class="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>
+          <div class="absolute top-3 left-3">
+            <span class="px-2.5 py-1 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 text-dark-950 font-black text-[9px] uppercase tracking-wider shadow-md">
+              👑 FADE SPECIALIST
+            </span>
+          </div>
+          <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between">
+            <span class="px-2 py-0.5 rounded bg-dark-950/80 text-amber-300 text-[10px] font-bold border border-amber-400/30">
+              Master Craftsman
+            </span>
+            <span class="text-[10px] text-gray-300 bg-dark-950/80 px-2 py-0.5 rounded border border-gray-700">
+              Fade Specialist & Stylist
+            </span>
+          </div>
+        </div>
+        <div class="p-5 flex flex-col flex-1 justify-between">
+          <div>
+            <h3 class="text-lg font-bold text-white mb-0.5">Major Fadez</h3>
+            <p class="text-[11px] text-amber-400 font-semibold mb-2">Fade Specialist & Stylist</p>
+            <p class="text-xs text-gray-400 leading-relaxed mb-4">
+              Specializes in high contrast tapers and styling modern trends. Specializes in buzz cuts, texture crop, drop fades & luxury beard combos.
+            </p>
+          </div>
+          <button class="open-booking-trigger w-full py-2.5 rounded-lg bg-dark-800 hover:bg-amber-400 hover:text-black border border-amber-400/40 text-amber-300 text-xs font-bold uppercase tracking-wider transition-all" data-barber-name="Major Fadez">
+            Book With Major
+          </button>
+        </div>
+      </div>
+      <!-- Barber: Hairanesa -->
+      <div class="card-luxury overflow-hidden flex flex-col justify-between group">
+        <div class="relative h-64 overflow-hidden bg-dark-950">
+          <img src="assets/images/kids-cut.jpg" alt="Hairanesa - Barber & Braider" class="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>
+          <div class="absolute top-3 left-3">
+            <span class="px-2.5 py-1 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 text-dark-950 font-black text-[9px] uppercase tracking-wider shadow-md">
+              👑 BRAIDING EXPERT
+            </span>
+          </div>
+          <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between">
+            <span class="px-2 py-0.5 rounded bg-dark-950/80 text-amber-300 text-[10px] font-bold border border-amber-400/30">
+              Master Stylist
+            </span>
+            <span class="text-[10px] text-gray-300 bg-dark-950/80 px-2 py-0.5 rounded border border-gray-700">
+              Barber & Braider
+            </span>
+          </div>
+        </div>
+        <div class="p-5 flex flex-col flex-1 justify-between">
+          <div>
+            <h3 class="text-lg font-bold text-white mb-0.5">Hairanesa</h3>
+            <p class="text-[11px] text-amber-400 font-semibold mb-2">Barber & Braider</p>
+            <p class="text-xs text-gray-400 leading-relaxed mb-4">
+              Dual threat stylist providing fresh tapers and neat protective braids. Specializes in precision haircuts, men's & women's braids, cornrows & loc maintenance.
+            </p>
+          </div>
+          <button class="open-booking-trigger w-full py-2.5 rounded-lg bg-dark-800 hover:bg-amber-400 hover:text-black border border-amber-400/40 text-amber-300 text-xs font-bold uppercase tracking-wider transition-all" data-barber-name="Hairanesa">
+            Book With Hairanesa
+          </button>
+        </div>
+      </div>
+      <!-- Barber: Donscreationz -->
+      <div class="card-luxury overflow-hidden flex flex-col justify-between group">
+        <div class="relative h-64 overflow-hidden bg-dark-950">
+          <img src="assets/images/crew-lasvegas.jpg" alt="Donscreationz - Master Barber" class="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>
+          <div class="absolute top-3 left-3">
+            <span class="px-2.5 py-1 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 text-dark-950 font-black text-[9px] uppercase tracking-wider shadow-md">
+              👑 CREATIVE HAIR ARTIST
+            </span>
+          </div>
+          <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between">
+            <span class="px-2 py-0.5 rounded bg-dark-950/80 text-amber-300 text-[10px] font-bold border border-amber-400/30">
+              Creative Stylist
             </span>
             <span class="text-[10px] text-gray-300 bg-dark-950/80 px-2 py-0.5 rounded border border-gray-700">
               Master Barber
@@ -830,116 +895,18 @@
         </div>
         <div class="p-5 flex flex-col flex-1 justify-between">
           <div>
-            <h3 class="text-lg font-bold text-white mb-0.5">Daniel</h3>
-            <p class="text-[11px] text-amber-400 font-semibold mb-2">Co-Owner & Master Barber</p>
+            <h3 class="text-lg font-bold text-white mb-0.5">Donscreationz</h3>
+            <p class="text-[11px] text-amber-400 font-semibold mb-2">Master Barber</p>
             <p class="text-xs text-gray-400 leading-relaxed mb-4">
-              Frequently highlighted by regulars in reviews as the shop's top cut. Brings surgical precision to skin fades, texture work, and custom detailing.
+              Turns haircuts into canvas art with sharp lines and unique freestyle designs. Specializes in freestyle parts, geometric razor art, kids styling & fades.
             </p>
           </div>
-          <button class="open-booking-trigger w-full py-2.5 rounded-lg bg-dark-800 hover:bg-amber-400 hover:text-black border border-amber-400/40 text-amber-300 text-xs font-bold uppercase tracking-wider transition-all" data-barber-name="Daniel">
-            Book With Daniel
+          <button class="open-booking-trigger w-full py-2.5 rounded-lg bg-dark-800 hover:bg-amber-400 hover:text-black border border-amber-400/40 text-amber-300 text-xs font-bold uppercase tracking-wider transition-all" data-barber-name="Donscreationz">
+            Book With Donscreationz
           </button>
         </div>
       </div>
-
-      <!-- Barber 2: Fidel (Co-Owner & Master Barber) -->
-      <div class="card-luxury overflow-hidden flex flex-col justify-between group">
-        <div class="relative h-64 overflow-hidden bg-dark-950">
-          <img src="assets/images/beard-shave.jpg" alt="Fidel - Co-Owner & Master Barber" class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500">
-          <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>
-          <div class="absolute top-3 left-3">
-            <span class="px-2.5 py-1 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 text-dark-950 font-black text-[9px] uppercase tracking-wider shadow-md">
-              👑 CO-OWNER
-            </span>
-          </div>
-          <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between">
-            <span class="px-2 py-0.5 rounded bg-dark-950/80 text-amber-300 text-[10px] font-bold border border-amber-400/30">
-              Razor Specialist
-            </span>
-            <span class="text-[10px] text-gray-300 bg-dark-950/80 px-2 py-0.5 rounded border border-gray-700">
-              Master Barber
-            </span>
-          </div>
-        </div>
-        <div class="p-5 flex flex-col flex-1 justify-between">
-          <div>
-            <h3 class="text-lg font-bold text-white mb-0.5">Fidel</h3>
-            <p class="text-[11px] text-amber-400 font-semibold mb-2">Co-Owner & Master Barber</p>
-            <p class="text-xs text-gray-400 leading-relaxed mb-4">
-              Co-owner and Master Barber known for traditional hot lather straight razor rituals, luxury beard sculpting, and executive royal grooming treatments.
-            </p>
-          </div>
-          <button class="open-booking-trigger w-full py-2.5 rounded-lg bg-dark-800 hover:bg-amber-400 hover:text-black border border-amber-400/40 text-amber-300 text-xs font-bold uppercase tracking-wider transition-all" data-barber-name="Fidel">
-            Book With Fidel
-          </button>
-        </div>
-      </div>
-
-      <!-- Barber 3: Marco Juarez (Staff Barber) -->
-      <div class="card-luxury overflow-hidden flex flex-col justify-between group">
-        <div class="relative h-64 overflow-hidden bg-dark-950">
-          <img src="assets/images/crew-lasvegas.jpg" alt="Marco Juarez - Staff Barber" class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500">
-          <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>
-          <div class="absolute top-3 left-3">
-            <span class="px-2.5 py-1 rounded-full bg-dark-800 text-gray-200 border border-gray-700 font-bold text-[9px] uppercase tracking-wider">
-              STAFF BARBER
-            </span>
-          </div>
-          <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between">
-            <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 text-[10px] font-semibold border border-emerald-500/30">
-              ● Active Chair
-            </span>
-            <span class="text-[10px] text-gray-300 bg-dark-950/80 px-2 py-0.5 rounded border border-gray-700">
-              Appointments
-            </span>
-          </div>
-        </div>
-        <div class="p-5 flex flex-col flex-1 justify-between">
-          <div>
-            <h3 class="text-lg font-bold text-white mb-0.5">Marco Juarez</h3>
-            <p class="text-[11px] text-amber-400 font-semibold mb-2">Staff Barber</p>
-            <p class="text-xs text-gray-400 leading-relaxed mb-4">
-              Actively taking client appointments and haircuts on our booking system. Specialist in clean tapers, modern textures, and sharp razor edge finishes.
-            </p>
-          </div>
-          <button class="open-booking-trigger w-full py-2.5 rounded-lg bg-dark-800 hover:bg-amber-400 hover:text-black border border-amber-400/40 text-amber-300 text-xs font-bold uppercase tracking-wider transition-all" data-barber-name="Marco Juarez">
-            Book With Marco
-          </button>
-        </div>
-      </div>
-
-      <!-- Barber 4: Polo Juarez (Staff Barber) -->
-      <div class="card-luxury overflow-hidden flex flex-col justify-between group">
-        <div class="relative h-64 overflow-hidden bg-dark-950">
-          <img src="assets/images/fade-textured.jpg" alt="Polo Juarez - Staff Barber" class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500">
-          <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent"></div>
-          <div class="absolute top-3 left-3">
-            <span class="px-2.5 py-1 rounded-full bg-dark-800 text-gray-200 border border-gray-700 font-bold text-[9px] uppercase tracking-wider">
-              STAFF BARBER
-            </span>
-          </div>
-          <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between">
-            <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 text-[10px] font-semibold border border-emerald-500/30">
-              ● Active Chair
-            </span>
-            <span class="text-[10px] text-gray-300 bg-dark-950/80 px-2 py-0.5 rounded border border-gray-700">
-              Fades & Beards
-            </span>
-          </div>
-        </div>
-        <div class="p-5 flex flex-col flex-1 justify-between">
-          <div>
-            <h3 class="text-lg font-bold text-white mb-0.5">Polo Juarez</h3>
-            <p class="text-[11px] text-amber-400 font-semibold mb-2">Staff Barber</p>
-            <p class="text-xs text-gray-400 leading-relaxed mb-4">
-              Actively taking appointments for specialty fades, razor-sharp beard lineups, custom part art, and patient youth precision cuts.
-            </p>
-          </div>
-          <button class="open-booking-trigger w-full py-2.5 rounded-lg bg-dark-800 hover:bg-amber-400 hover:text-black border border-amber-400/40 text-amber-300 text-xs font-bold uppercase tracking-wider transition-all" data-barber-name="Polo Juarez">
-            Book With Polo
-          </button>
-        </div>
-      </div>
+      <!-- END BARBERS_LIST -->
 
     </div>
   </section>
@@ -1041,22 +1008,18 @@
 
     <!-- Reviews Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
-      
-      <!-- Review 1: Daniel (Co-Owner) -->
+      <!-- BEGIN REVIEWS_LIST -->
+      <!-- Review: Marcus Rodriguez -->
       <div class="review-card card-luxury p-6 flex flex-col justify-between" data-category="locals">
         <div>
           <div class="flex items-center justify-between mb-4">
             <div class="flex text-amber-400 text-sm space-x-1">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             </div>
             <span class="text-[10px] text-gray-500 uppercase font-mono">Booksy Verified</span>
           </div>
           <p class="text-xs text-gray-300 leading-relaxed italic mb-6">
-            "Hands down the cleanest skin fade in Vegas. I’ve tried at least 5 different shops in town and nobody blends like Daniel. There's a reason everyone recommends him as the top cut. You walk out feeling like a million bucks."
+            "Cleanest taper in Las Vegas. Mir takes his time and gets the lineup surgically straight. The shop vibe is friendly and energetic."
           </p>
         </div>
         <div class="flex items-center space-x-3 pt-4 border-t border-gray-800">
@@ -1065,26 +1028,21 @@
           </div>
           <div>
             <h4 class="text-xs font-bold text-white">Marcus Rodriguez</h4>
-            <p class="text-[10px] text-gray-400">Regular Client • Cut by Daniel (Co-Owner)</p>
+            <p class="text-[10px] text-gray-400">Regular • Cut by Mir The Barber</p>
           </div>
         </div>
       </div>
-
-      <!-- Review 2: Fidel (Co-Owner) -->
+      <!-- Review: Andre Lewis -->
       <div class="review-card card-luxury p-6 flex flex-col justify-between" data-category="beards">
         <div>
           <div class="flex items-center justify-between mb-4">
             <div class="flex text-amber-400 text-sm space-x-1">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             </div>
             <span class="text-[10px] text-gray-500 uppercase font-mono">Booksy Verified</span>
           </div>
           <p class="text-xs text-gray-300 leading-relaxed italic mb-6">
-            "The hot towel straight razor beard treatment with Fidel is pure luxury. He lines up the cheeks and neckline with zero irritation. Co-owners who truly care about the craft."
+            "Hairanesa is the truth. Got my cornrows done super neat, and got a fresh taper right after in the same chair. Saves so much time."
           </p>
         </div>
         <div class="flex items-center space-x-3 pt-4 border-t border-gray-800">
@@ -1093,26 +1051,21 @@
           </div>
           <div>
             <h4 class="text-xs font-bold text-white">Andre Lewis</h4>
-            <p class="text-[10px] text-gray-400">Beard Client • Groomed by Fidel (Co-Owner)</p>
+            <p class="text-[10px] text-gray-400">Regular • Braids by Hairanesa</p>
           </div>
         </div>
       </div>
-
-      <!-- Review 3: Marco Juarez (Staff Barber) -->
+      <!-- Review: David Thompson -->
       <div class="review-card card-luxury p-6 flex flex-col justify-between" data-category="tourists">
         <div>
           <div class="flex items-center justify-between mb-4">
             <div class="flex text-amber-400 text-sm space-x-1">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             </div>
             <span class="text-[10px] text-gray-500 uppercase font-mono">Google Review</span>
           </div>
           <p class="text-xs text-gray-300 leading-relaxed italic mb-6">
-            "Flew into Vegas for a conference and needed a tight haircut. Booked an appointment with Marco Juarez online. 5 minutes from the Strip, super easy parking, and Marco gave me one of the sharpest tapers ever."
+            "Major Fadez gave me the best drop fade I've had. Super fast, professional, and took me in right away. Worth every dollar."
           </p>
         </div>
         <div class="flex items-center space-x-3 pt-4 border-t border-gray-800">
@@ -1121,38 +1074,11 @@
           </div>
           <div>
             <h4 class="text-xs font-bold text-white">David Thompson</h4>
-            <p class="text-[10px] text-gray-400">Visitor from Chicago • Cut by Marco Juarez</p>
+            <p class="text-[10px] text-gray-400">Tourist • Cut by Major Fadez</p>
           </div>
         </div>
       </div>
-
-      <!-- Review 4: Polo Juarez (Staff Barber) -->
-      <div class="review-card card-luxury p-6 flex flex-col justify-between" data-category="locals">
-        <div>
-          <div class="flex items-center justify-between mb-4">
-            <div class="flex text-amber-400 text-sm space-x-1">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-            <span class="text-[10px] text-gray-500 uppercase font-mono">Google Review</span>
-          </div>
-          <p class="text-xs text-gray-300 leading-relaxed italic mb-6">
-            "Brought my son in for a fade and got my beard lined up with Polo Juarez. Patient, professional, and razor work was on point. Great vibe in the shop, definitely our new family spot!"
-          </p>
-        </div>
-        <div class="flex items-center space-x-3 pt-4 border-t border-gray-800">
-          <div class="w-9 h-9 rounded-full bg-amber-400/20 text-amber-300 font-bold flex items-center justify-center text-xs">
-            JT
-          </div>
-          <div>
-            <h4 class="text-xs font-bold text-white">Jason Torres</h4>
-            <p class="text-[10px] text-gray-400">Las Vegas Local • Cut by Polo Juarez</p>
-          </div>
-        </div>
-      </div>
+      <!-- END REVIEWS_LIST -->
 
     </div>
   </section>
@@ -1632,7 +1558,7 @@
           </div>
 
           <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5 sm:gap-3">
-            
+            <!-- BEGIN BOOKING_BARBERS -->
             <div class="barber-select-option p-3 sm:p-4 rounded-xl border border-amber-400 bg-amber-500/15 cursor-pointer text-center transition-all active:scale-95 col-span-2 sm:col-span-1" data-barber="Any Available">
               <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-amber-400 text-black font-bold flex items-center justify-center mx-auto mb-2 text-xs sm:text-sm">
                 <i class="fa-solid fa-users"></i>
@@ -1640,38 +1566,35 @@
               <span class="text-xs font-bold text-white block">Any Available</span>
               <span class="text-[10px] text-emerald-400">Fastest Availability</span>
             </div>
-
-            <div class="barber-select-option p-3 sm:p-4 rounded-xl border border-gray-800 bg-dark-850 hover:border-gray-700 cursor-pointer text-center transition-all active:scale-95" data-barber="Daniel">
-              <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-amber-400 to-amber-600 text-dark-950 font-black flex items-center justify-center mx-auto mb-2 text-xs sm:text-sm">
-                D
-              </div>
-              <span class="text-xs font-bold text-white block">Daniel</span>
-              <span class="text-[10px] text-amber-300">👑 Co-Owner / Top Cut</span>
-            </div>
-
-            <div class="barber-select-option p-3 sm:p-4 rounded-xl border border-gray-800 bg-dark-850 hover:border-gray-700 cursor-pointer text-center transition-all active:scale-95" data-barber="Fidel">
-              <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-amber-400 to-amber-600 text-dark-950 font-black flex items-center justify-center mx-auto mb-2 text-xs sm:text-sm">
-                F
-              </div>
-              <span class="text-xs font-bold text-white block">Fidel</span>
-              <span class="text-[10px] text-amber-300">👑 Co-Owner / Shaves</span>
-            </div>
-
-            <div class="barber-select-option p-3 sm:p-4 rounded-xl border border-gray-800 bg-dark-850 hover:border-gray-700 cursor-pointer text-center transition-all active:scale-95" data-barber="Marco Juarez">
+            <div class="barber-select-option p-3 sm:p-4 rounded-xl border border-gray-800 bg-dark-850 hover:border-gray-700 cursor-pointer text-center transition-all active:scale-95" data-barber="Mir The Barber">
               <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-dark-750 text-amber-400 border border-gray-700 font-bold flex items-center justify-center mx-auto mb-2 text-xs sm:text-sm">
-                MJ
+                M
               </div>
-              <span class="text-xs font-bold text-white block">Marco Juarez</span>
-              <span class="text-[10px] text-emerald-400">Staff Barber • Appts</span>
+              <span class="text-xs font-bold text-white block">Mir The Barber</span>
+              <span class="text-[10px] text-amber-300">Master Barber / Top Rated</span>
             </div>
-
-            <div class="barber-select-option p-3 sm:p-4 rounded-xl border border-gray-800 bg-dark-850 hover:border-gray-700 cursor-pointer text-center transition-all active:scale-95" data-barber="Polo Juarez">
+            <div class="barber-select-option p-3 sm:p-4 rounded-xl border border-gray-800 bg-dark-850 hover:border-gray-700 cursor-pointer text-center transition-all active:scale-95" data-barber="Major Fadez">
               <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-dark-750 text-amber-400 border border-gray-700 font-bold flex items-center justify-center mx-auto mb-2 text-xs sm:text-sm">
-                PJ
+                MF
               </div>
-              <span class="text-xs font-bold text-white block">Polo Juarez</span>
-              <span class="text-[10px] text-emerald-400">Staff Barber • Fades</span>
+              <span class="text-xs font-bold text-white block">Major Fadez</span>
+              <span class="text-[10px] text-amber-300">Fade Specialist</span>
             </div>
+            <div class="barber-select-option p-3 sm:p-4 rounded-xl border border-gray-800 bg-dark-850 hover:border-gray-700 cursor-pointer text-center transition-all active:scale-95" data-barber="Hairanesa">
+              <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-dark-750 text-amber-400 border border-gray-700 font-bold flex items-center justify-center mx-auto mb-2 text-xs sm:text-sm">
+                H
+              </div>
+              <span class="text-xs font-bold text-white block">Hairanesa</span>
+              <span class="text-[10px] text-amber-300">Braiding Expert</span>
+            </div>
+            <div class="barber-select-option p-3 sm:p-4 rounded-xl border border-gray-800 bg-dark-850 hover:border-gray-700 cursor-pointer text-center transition-all active:scale-95" data-barber="Donscreationz">
+              <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-dark-750 text-amber-400 border border-gray-700 font-bold flex items-center justify-center mx-auto mb-2 text-xs sm:text-sm">
+                DC
+              </div>
+              <span class="text-xs font-bold text-white block">Donscreationz</span>
+              <span class="text-[10px] text-amber-300">Creative Hair Artist</span>
+            </div>
+            <!-- END BOOKING_BARBERS -->
 
           </div>
 
