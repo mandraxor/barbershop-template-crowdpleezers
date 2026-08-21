@@ -1,8 +1,40 @@
 /**
- * FADED TIMES BARBERSHOP (@fadedtimeslv)
- * 3868 W Sahara Ave, Las Vegas, NV 89102
+ * BARBERSHOP TEMPLATE ENGINE (@fadedtimeslv)
  * Interactive Website JavaScript
  */
+
+// Global fallback if window.SHOP_CONFIG is not defined (e.g. template master)
+if (!window.SHOP_CONFIG) {
+  window.SHOP_CONFIG = {
+    shop: {
+      name: "Faded Times Barbershop",
+      instagram: "fadedtimeslv"
+    },
+    hours: {
+      timezone: "America/Los_Angeles",
+      schedule: {
+        tuesday_friday: {
+          days: "Tuesday – Friday",
+          open: "9:00 AM",
+          close: "6:00 PM",
+          open24h: "09:00",
+          close24h: "18:00"
+        },
+        saturday: {
+          days: "Saturday",
+          open: "9:00 AM",
+          close: "4:00 PM",
+          open24h: "09:00",
+          close24h: "16:00"
+        },
+        sunday_monday: {
+          days: "Sunday & Monday",
+          status: "Closed"
+        }
+      }
+    }
+  };
+}
 
 document.addEventListener('DOMContentLoaded', () => {
   initShopStatus();
@@ -16,81 +48,71 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ==========================================================================
-   1. REAL-TIME SHOP STATUS (LAS VEGAS TIMEZONE: PST / PDT)
+   1. REAL-TIME SHOP STATUS (DYNAMIC CONFIG VIA WINDOW.SHOP_CONFIG)
    ========================================================================== */
 function initShopStatus() {
-  const statusBadge = document.getElementById('shop-status-badge');
   const statusText = document.getElementById('shop-status-text');
   const statusDot = document.getElementById('shop-status-dot');
   const heroStatusText = document.getElementById('hero-status-text');
   const walkinWaitText = document.getElementById('walkin-wait-text');
-  const todayHoursRow = document.getElementById('today-hours-highlight');
 
   function updateStatus() {
-    // Get current time in America/Los_Angeles (Las Vegas)
+    const config = window.SHOP_CONFIG;
+    if (!config) return;
+
+    // Get current time in target timezone
     const now = new Date();
-    const lvString = now.toLocaleString("en-US", { timeZone: "America/Los_Angeles" });
-    const lvDate = new Date(lvString);
-    const day = lvDate.getDay(); // 0 = Sun, 1 = Mon, 2 = Tue, ..., 6 = Sat
-    const hour = lvDate.getHours();
-    const minute = lvDate.getMinutes();
+    const tzString = now.toLocaleString("en-US", { timeZone: config.hours.timezone || "America/Los_Angeles" });
+    const localDate = new Date(tzString);
+    const day = localDate.getDay(); // 0 = Sun, 1 = Mon, 2 = Tue, ..., 6 = Sat
+    const hour = localDate.getHours();
+    const minute = localDate.getMinutes();
     const timeDecimal = hour + minute / 60;
 
     let isOpen = false;
     let closingTime = '';
     let nextOpening = '';
 
-    // Schedule:
-    // Tue-Fri (2-5): 9:00 AM - 6:00 PM (9.0 - 18.0)
-    // Sat (6): 9:00 AM - 4:00 PM (9.0 - 16.0)
-    // Sun (0) & Mon (1): Closed
+    // Determine current day key in config hours
+    let dayKey = '';
+    if (day === 0 || day === 1) {
+      dayKey = 'sunday_monday';
+    } else if (day === 6) {
+      dayKey = config.hours.schedule.saturday ? 'saturday' : 'tuesday_saturday';
+    } else {
+      dayKey = config.hours.schedule.tuesday_saturday ? 'tuesday_saturday' : 'tuesday_friday';
+    }
 
-    if (day >= 2 && day <= 6) {
-      if (timeDecimal >= 10.0 && timeDecimal < 19.0) {
+    const todaySched = config.hours.schedule[dayKey];
+    if (todaySched && !todaySched.status) {
+      const [openHour, openMin] = todaySched.open24h.split(':').map(Number);
+      const [closeHour, closeMin] = todaySched.close24h.split(':').map(Number);
+      const openDecimal = openHour + (openMin || 0) / 60;
+      const closeDecimal = closeHour + (closeMin || 0) / 60;
+
+      if (timeDecimal >= openDecimal && timeDecimal < closeDecimal) {
         isOpen = true;
-        closingTime = '7:00 PM';
-      } else if (timeDecimal < 10.0) {
-        nextOpening = 'today at 10:00 AM';
+        closingTime = todaySched.close;
+      } else if (timeDecimal < openDecimal) {
+        nextOpening = `today at ${todaySched.open}`;
       } else {
-        nextOpening = day === 5 ? 'tomorrow (Sat) at 9:00 AM' : 'tomorrow at 9:00 AM';
-      }
-    }  else if (timeDecimal < 10.0) {
-        nextOpening = 'today at 10:00 AM';
-      } else {
-        nextOpening = 'Tuesday at 10:00 AM';
+        nextOpening = getNextOpeningLabel(day, config);
       }
     } else {
-      // Sunday or Monday
-      nextOpening = 'Tuesday at 10:00 AM';
+      nextOpening = getNextOpeningLabel(day, config);
     }
 
     // Update Banner & Status Badges
     if (isOpen) {
-      if (statusDot) {
-        statusDot.className = 'w-2.5 h-2.5 rounded-full bg-emerald-400 pulse-green mr-2';
-      }
-      if (statusText) {
-        statusText.innerHTML = `<span class="font-semibold text-emerald-400">OPEN NOW</span> • Closes at ${closingTime} • Walk-ins & Bookings Welcome`;
-      }
-      if (heroStatusText) {
-        heroStatusText.innerHTML = `<span class="text-emerald-400 font-semibold">● Open Today Until ${closingTime}</span> — Walk-ins Welcome`;
-      }
-      if (walkinWaitText) {
-        walkinWaitText.innerHTML = `Est. Walk-in Wait: <span class="text-amber-300 font-bold">~15–20 Mins</span> (3 Barbers on Chair)`;
-      }
+      if (statusDot) statusDot.className = 'w-2.5 h-2.5 rounded-full bg-emerald-400 pulse-green mr-2';
+      if (statusText) statusText.innerHTML = `<span class="font-semibold text-emerald-400">OPEN NOW</span> • Closes at ${closingTime} • Walk-ins & Bookings Welcome`;
+      if (heroStatusText) heroStatusText.innerHTML = `<span class="text-emerald-400 font-semibold">● Open Today Until ${closingTime}</span> — Walk-ins Welcome`;
+      if (walkinWaitText) walkinWaitText.innerHTML = `Est. Walk-in Wait: <span class="text-amber-300 font-bold">~15–20 Mins</span> (3 Barbers on Chair)`;
     } else {
-      if (statusDot) {
-        statusDot.className = 'w-2.5 h-2.5 rounded-full bg-amber-500 mr-2';
-      }
-      if (statusText) {
-        statusText.innerHTML = `<span class="font-semibold text-amber-400">CLOSED NOW</span> • Opens ${nextOpening} • Online Booking Open 24/7`;
-      }
-      if (heroStatusText) {
-        heroStatusText.innerHTML = `<span class="text-amber-400 font-semibold">● Closed Now</span> — Re-opens ${nextOpening} (Book Online 24/7)`;
-      }
-      if (walkinWaitText) {
-        walkinWaitText.innerHTML = `Shop is closed. <span class="text-amber-300 font-semibold">Book ahead online for priority chair!</span>`;
-      }
+      if (statusDot) statusDot.className = 'w-2.5 h-2.5 rounded-full bg-amber-500 mr-2';
+      if (statusText) statusText.innerHTML = `<span class="font-semibold text-amber-400">CLOSED NOW</span> • Opens ${nextOpening} • Online Booking Open 24/7`;
+      if (heroStatusText) heroStatusText.innerHTML = `<span class="text-amber-400 font-semibold">● Closed Now</span> — Re-opens ${nextOpening} (Book Online 24/7)`;
+      if (walkinWaitText) walkinWaitText.innerHTML = `Shop is closed. <span class="text-amber-300 font-semibold">Book ahead online for priority chair!</span>`;
     }
 
     // Highlight current day in Hours table if present
@@ -107,6 +129,20 @@ function initShopStatus() {
         if (badge) badge.classList.add('hidden');
       }
     });
+  }
+
+  function getNextOpeningLabel(currentDay, config) {
+    if (currentDay === 6 || currentDay === 0 || currentDay === 1) {
+      const sched = config.hours.schedule.tuesday_saturday || config.hours.schedule.tuesday_friday;
+      return `Tuesday at ${sched ? sched.open : '10:00 AM'}`;
+    } else {
+      const nextDayIndex = currentDay + 1;
+      let nextDaySched = config.hours.schedule.tuesday_saturday || config.hours.schedule.tuesday_friday;
+      if (nextDayIndex === 6 && config.hours.schedule.saturday) {
+        nextDaySched = config.hours.schedule.saturday;
+      }
+      return `tomorrow at ${nextDaySched ? nextDaySched.open : '9:00 AM'}`;
+    }
   }
 
   updateStatus();
