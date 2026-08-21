@@ -111,7 +111,7 @@
     {
       "key": "haircut",
       "name": "Signature Haircut",
-      "subtitle": "Tailored precision skin fade, drop fade, low taper, scissor crop, or classic cut. Includes hot lather neck lineup and styling.",
+      "description": "Tailored precision skin fade, drop fade, low taper, scissor crop, or classic cut. Includes hot lather neck lineup and styling.",
       "price": 40,
       "duration": 40,
       "icon": "fa-scissors",
@@ -120,7 +120,7 @@
     {
       "key": "haircut-beard",
       "name": "Haircut & Beard Sculpting",
-      "subtitle": "The crowd pleezer combo. Precision cut with beard trim, straight razor line shaping, hot towel, and nourishing beard oil.",
+      "description": "The crowd pleezer combo. Precision cut with beard trim, straight razor line shaping, hot towel, and nourishing beard oil.",
       "price": 45,
       "duration": 55,
       "icon": "fa-user-tie",
@@ -129,7 +129,7 @@
     {
       "key": "lineup",
       "name": "Razor Edge Lineup",
-      "subtitle": "Quick neckline and hairline cleaning. Sharp edging on temples and sideburns with a hot lather razor touchup.",
+      "description": "Quick neckline and hairline cleaning. Sharp edging on temples and sideburns with a hot lather razor touchup.",
       "price": 20,
       "duration": 20,
       "icon": "fa-wand-magic-sparkles",
@@ -138,7 +138,7 @@
     {
       "key": "kids-cut",
       "name": "Kid's Precision Cut",
-      "subtitle": "Patient, friendly styling for children ages 12 & under. Cool tapers, skin fades, or scissor crops.",
+      "description": "Patient, friendly styling for children ages 12 & under. Cool tapers, skin fades, or scissor crops.",
       "price": 30,
       "duration": 30,
       "icon": "fa-child",
@@ -147,7 +147,7 @@
     {
       "key": "senior-cut",
       "name": "Senior Gentleman Cut",
-      "subtitle": "Classic scissor cut, trim, and clean neckline feathering for seniors 65 & over.",
+      "description": "Classic scissor cut, trim, and clean neckline feathering for seniors 65 & over.",
       "price": 30,
       "duration": 30,
       "icon": "fa-user-clock",
@@ -156,7 +156,7 @@
     {
       "key": "braids-locs",
       "name": "Braids & Locs Styling",
-      "subtitle": "Professional braiding, cornrows, box braids, or starter locs/retwists. Handled by our specialist stylists.",
+      "description": "Professional braiding, cornrows, box braids, or starter locs/retwists. Handled by our specialist stylists.",
       "price": 65,
       "duration": 90,
       "icon": "fa-crown",

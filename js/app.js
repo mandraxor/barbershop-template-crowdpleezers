@@ -1,40 +1,7 @@
 /**
- * BARBERSHOP TEMPLATE ENGINE (@crowdpleezers)
+ * BARBERSHOP ENGINE
  * Interactive Website JavaScript
  */
-
-// Global fallback if window.SHOP_CONFIG is not defined (e.g. template master)
-if (!window.SHOP_CONFIG) {
-  window.SHOP_CONFIG = {
-    shop: {
-      name: "Crowd Pleezers Barbershop",
-      instagram: "crowdpleezers"
-    },
-    hours: {
-      timezone: "America/Los_Angeles",
-      schedule: {
-        tuesday_friday: {
-          days: "Tuesday – Friday",
-          open: "9:00 AM",
-          close: "6:00 PM",
-          open24h: "09:00",
-          close24h: "18:00"
-        },
-        saturday: {
-          days: "Saturday",
-          open: "9:00 AM",
-          close: "4:00 PM",
-          open24h: "09:00",
-          close24h: "16:00"
-        },
-        sunday_monday: {
-          days: "Sunday & Monday",
-          status: "Closed"
-        }
-      }
-    }
-  };
-}
 
 document.addEventListener('DOMContentLoaded', () => {
   initShopStatus();
@@ -48,71 +15,85 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ==========================================================================
-   1. REAL-TIME SHOP STATUS (DYNAMIC CONFIG VIA WINDOW.SHOP_CONFIG)
+   1. REAL-TIME SHOP STATUS (LAS VEGAS TIMEZONE: PST / PDT)
    ========================================================================== */
 function initShopStatus() {
+  const statusBadge = document.getElementById('shop-status-badge');
   const statusText = document.getElementById('shop-status-text');
   const statusDot = document.getElementById('shop-status-dot');
   const heroStatusText = document.getElementById('hero-status-text');
   const walkinWaitText = document.getElementById('walkin-wait-text');
+  const todayHoursRow = document.getElementById('today-hours-highlight');
 
   function updateStatus() {
-    const config = window.SHOP_CONFIG;
-    if (!config) return;
-
-    // Get current time in target timezone
+    // Get current time in America/Los_Angeles (Las Vegas)
     const now = new Date();
-    const tzString = now.toLocaleString("en-US", { timeZone: config.hours.timezone || "America/Los_Angeles" });
-    const localDate = new Date(tzString);
-    const day = localDate.getDay(); // 0 = Sun, 1 = Mon, 2 = Tue, ..., 6 = Sat
-    const hour = localDate.getHours();
-    const minute = localDate.getMinutes();
+    const lvString = now.toLocaleString("en-US", { timeZone: "America/Los_Angeles" });
+    const lvDate = new Date(lvString);
+    const day = lvDate.getDay(); // 0 = Sun, 1 = Mon, 2 = Tue, ..., 6 = Sat
+    const hour = lvDate.getHours();
+    const minute = lvDate.getMinutes();
     const timeDecimal = hour + minute / 60;
 
     let isOpen = false;
     let closingTime = '';
     let nextOpening = '';
 
-    // Determine current day key in config hours
-    let dayKey = '';
-    if (day === 0 || day === 1) {
-      dayKey = 'sunday_monday';
-    } else if (day === 6) {
-      dayKey = config.hours.schedule.saturday ? 'saturday' : 'tuesday_saturday';
-    } else {
-      dayKey = config.hours.schedule.tuesday_saturday ? 'tuesday_saturday' : 'tuesday_friday';
-    }
+    // Schedule:
+    // Tue-Fri (2-5): 9:00 AM - 6:00 PM (9.0 - 18.0)
+    // Sat (6): 9:00 AM - 4:00 PM (9.0 - 16.0)
+    // Sun (0) & Mon (1): Closed
 
-    const todaySched = config.hours.schedule[dayKey];
-    if (todaySched && !todaySched.status) {
-      const [openHour, openMin] = todaySched.open24h.split(':').map(Number);
-      const [closeHour, closeMin] = todaySched.close24h.split(':').map(Number);
-      const openDecimal = openHour + (openMin || 0) / 60;
-      const closeDecimal = closeHour + (closeMin || 0) / 60;
-
-      if (timeDecimal >= openDecimal && timeDecimal < closeDecimal) {
+    if (day >= 2 && day <= 5) {
+      if (timeDecimal >= 9.0 && timeDecimal < 18.0) {
         isOpen = true;
-        closingTime = todaySched.close;
-      } else if (timeDecimal < openDecimal) {
-        nextOpening = `today at ${todaySched.open}`;
+        closingTime = '6:00 PM';
+      } else if (timeDecimal < 9.0) {
+        nextOpening = 'today at 9:00 AM';
       } else {
-        nextOpening = getNextOpeningLabel(day, config);
+        nextOpening = day === 5 ? 'tomorrow (Sat) at 9:00 AM' : 'tomorrow at 9:00 AM';
+      }
+    } else if (day === 6) {
+      if (timeDecimal >= 9.0 && timeDecimal < 16.0) {
+        isOpen = true;
+        closingTime = '4:00 PM';
+      } else if (timeDecimal < 9.0) {
+        nextOpening = 'today at 9:00 AM';
+      } else {
+        nextOpening = 'Tuesday at 9:00 AM';
       }
     } else {
-      nextOpening = getNextOpeningLabel(day, config);
+      // Sunday or Monday
+      nextOpening = 'Tuesday at 9:00 AM';
     }
 
     // Update Banner & Status Badges
     if (isOpen) {
-      if (statusDot) statusDot.className = 'w-2.5 h-2.5 rounded-full bg-emerald-400 pulse-green mr-2';
-      if (statusText) statusText.innerHTML = `<span class="font-semibold text-emerald-400">OPEN NOW</span> • Closes at ${closingTime} • Walk-ins & Bookings Welcome`;
-      if (heroStatusText) heroStatusText.innerHTML = `<span class="text-emerald-400 font-semibold">● Open Today Until ${closingTime}</span> — Walk-ins Welcome`;
-      if (walkinWaitText) walkinWaitText.innerHTML = `Est. Walk-in Wait: <span class="text-amber-300 font-bold">~15–20 Mins</span> (3 Barbers on Chair)`;
+      if (statusDot) {
+        statusDot.className = 'w-2.5 h-2.5 rounded-full bg-emerald-400 pulse-green mr-2';
+      }
+      if (statusText) {
+        statusText.innerHTML = `<span class="font-semibold text-emerald-400">OPEN NOW</span> • Closes at ${closingTime} • Walk-ins & Bookings Welcome`;
+      }
+      if (heroStatusText) {
+        heroStatusText.innerHTML = `<span class="text-emerald-400 font-semibold">● Open Today Until ${closingTime}</span> — Walk-ins Welcome`;
+      }
+      if (walkinWaitText) {
+        walkinWaitText.innerHTML = `Est. Walk-in Wait: <span class="text-amber-300 font-bold">~15–20 Mins</span> (3 Barbers on Chair)`;
+      }
     } else {
-      if (statusDot) statusDot.className = 'w-2.5 h-2.5 rounded-full bg-amber-500 mr-2';
-      if (statusText) statusText.innerHTML = `<span class="font-semibold text-amber-400">CLOSED NOW</span> • Opens ${nextOpening} • Online Booking Open 24/7`;
-      if (heroStatusText) heroStatusText.innerHTML = `<span class="text-amber-400 font-semibold">● Closed Now</span> — Re-opens ${nextOpening} (Book Online 24/7)`;
-      if (walkinWaitText) walkinWaitText.innerHTML = `Shop is closed. <span class="text-amber-300 font-semibold">Book ahead online for priority chair!</span>`;
+      if (statusDot) {
+        statusDot.className = 'w-2.5 h-2.5 rounded-full bg-amber-500 mr-2';
+      }
+      if (statusText) {
+        statusText.innerHTML = `<span class="font-semibold text-amber-400">CLOSED NOW</span> • Opens ${nextOpening} • Online Booking Open 24/7`;
+      }
+      if (heroStatusText) {
+        heroStatusText.innerHTML = `<span class="text-amber-400 font-semibold">● Closed Now</span> — Re-opens ${nextOpening} (Book Online 24/7)`;
+      }
+      if (walkinWaitText) {
+        walkinWaitText.innerHTML = `Shop is closed. <span class="text-amber-300 font-semibold">Book ahead online for priority chair!</span>`;
+      }
     }
 
     // Highlight current day in Hours table if present
@@ -129,20 +110,6 @@ function initShopStatus() {
         if (badge) badge.classList.add('hidden');
       }
     });
-  }
-
-  function getNextOpeningLabel(currentDay, config) {
-    if (currentDay === 6 || currentDay === 0 || currentDay === 1) {
-      const sched = config.hours.schedule.tuesday_saturday || config.hours.schedule.tuesday_friday;
-      return `Tuesday at ${sched ? sched.open : '10:00 AM'}`;
-    } else {
-      const nextDayIndex = currentDay + 1;
-      let nextDaySched = config.hours.schedule.tuesday_saturday || config.hours.schedule.tuesday_friday;
-      if (nextDayIndex === 6 && config.hours.schedule.saturday) {
-        nextDaySched = config.hours.schedule.saturday;
-      }
-      return `tomorrow at ${nextDaySched ? nextDaySched.open : '9:00 AM'}`;
-    }
   }
 
   updateStatus();
@@ -270,12 +237,21 @@ function initBookingSystem() {
 
   if (backToStep3) backToStep3.addEventListener('click', () => goToStep(3));
 
-  if (confirmBookingBtn) {
-    confirmBookingBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      submitBooking();
+  // Booksy Handoff Button
+  const booksyHandoffBtn = document.getElementById('btn-booksy-handoff');
+  if (booksyHandoffBtn) {
+    const booksyUrl = window.SHOP_CONFIG?.shop?.booksyUrl || 'https://booksy.com';
+    booksyHandoffBtn.href = booksyUrl;
+    booksyHandoffBtn.addEventListener('click', () => {
+      showToast(`Redirecting to Booksy for ${bookingState.selectedBarber}...`, 'info');
     });
   }
+
+  // Bind all direct Booksy profile links across the page to the config URL
+  const booksyProfileUrl = window.SHOP_CONFIG?.shop?.booksyUrl || 'https://booksy.com';
+  document.querySelectorAll('.direct-booksy-link').forEach(link => {
+    link.href = booksyProfileUrl;
+  });
 }
 
 function openBookingModal(preselectedServiceKey = null, preselectedBarber = null) {
@@ -506,28 +482,58 @@ function updateSummaryStep4() {
   const summaryBox = document.getElementById('step-4-summary');
   if (!summaryBox) return;
 
-  const serviceNames = bookingState.selectedServices.map(k => serviceCatalogue[k]?.name || k).join(', ');
+  const serviceItems = bookingState.selectedServices.map(k => {
+    const s = serviceCatalogue[k];
+    if (!s) return `<div class="flex justify-between text-xs py-1 text-gray-200"><span>${k}</span></div>`;
+    return `
+      <div class="flex justify-between items-center text-xs py-1 border-b border-gray-800/60 last:border-0">
+        <span class="text-gray-200 font-medium">${s.name} <span class="text-gray-500 font-normal">(${s.duration} min)</span></span>
+        <span class="text-amber-400 font-bold">$${s.price}</span>
+      </div>
+    `;
+  }).join('');
 
   summaryBox.innerHTML = `
-    <div class="bg-gray-900/90 border border-amber-500/30 rounded-xl p-4 space-y-2 text-sm">
-      <div class="flex justify-between items-center pb-2 border-b border-gray-800">
-        <span class="text-gray-400 font-medium">Selected Services:</span>
-        <span class="text-white font-semibold text-right max-w-[220px] truncate">${serviceNames}</span>
+    <div class="bg-gray-900/95 border border-amber-500/30 rounded-2xl p-4 sm:p-5 space-y-3 text-sm shadow-inner">
+      <div class="pb-2 border-b border-gray-800">
+        <span class="text-gray-400 text-xs font-semibold uppercase tracking-wider block mb-1">Selected Grooming:</span>
+        <div class="space-y-0.5">
+          ${serviceItems}
+        </div>
       </div>
-      <div class="flex justify-between items-center pb-2 border-b border-gray-800">
-        <span class="text-gray-400 font-medium">Master Barber:</span>
-        <span class="text-amber-300 font-semibold">${bookingState.selectedBarber}</span>
+      <div class="grid grid-cols-2 gap-3 pb-2 border-b border-gray-800 text-xs">
+        <div>
+          <span class="text-gray-400 font-medium block">Barber:</span>
+          <span class="text-amber-300 font-bold text-xs sm:text-sm flex items-center mt-0.5 truncate">
+            <i class="fa-solid fa-scissors text-amber-400 mr-1.5 text-xs shrink-0"></i>
+            ${bookingState.selectedBarber}
+          </span>
+        </div>
+        <div>
+          <span class="text-gray-400 font-medium block">Date & Time:</span>
+          <span class="text-emerald-400 font-bold text-xs sm:text-sm flex items-center mt-0.5">
+            <i class="fa-regular fa-calendar-check mr-1.5 text-xs shrink-0"></i>
+            ${bookingState.selectedDateFormatted || bookingState.selectedDate} @ ${bookingState.selectedTime}
+          </span>
+        </div>
       </div>
-      <div class="flex justify-between items-center pb-2 border-b border-gray-800">
-        <span class="text-gray-400 font-medium">Appointment:</span>
-        <span class="text-white font-semibold">${bookingState.selectedDateFormatted || bookingState.selectedDate} @ ${bookingState.selectedTime}</span>
-      </div>
-      <div class="flex justify-between items-center pt-1 text-base">
-        <span class="text-gray-300 font-bold">Estimated Total:</span>
-        <span class="text-amber-400 font-serif-luxury font-bold text-lg">$${bookingState.totalPrice} <span class="text-xs text-gray-400 font-normal">(${bookingState.totalDuration} min)</span></span>
+      <div class="flex justify-between items-center pt-1 text-sm sm:text-base">
+        <div>
+          <span class="text-gray-300 font-bold block">Estimated Chair Total:</span>
+          <span class="text-[11px] text-gray-400"><i class="fa-regular fa-clock text-amber-400 mr-1"></i> ${bookingState.totalDuration} Minutes</span>
+        </div>
+        <div class="text-right">
+          <span class="text-amber-400 font-serif font-black text-2xl">$${bookingState.totalPrice}</span>
+        </div>
       </div>
     </div>
   `;
+
+  // Update dynamic Booksy button link
+  const booksyBtn = document.getElementById('btn-booksy-handoff');
+  if (booksyBtn) {
+    booksyBtn.href = window.SHOP_CONFIG?.shop?.booksyUrl || 'https://booksy.com';
+  }
 }
 
 function submitBooking() {
@@ -580,7 +586,7 @@ function submitBooking() {
         </div>
         <div class="flex justify-between items-center pt-1">
           <span class="text-gray-400 text-xs uppercase tracking-wider">Location</span>
-          <span class="text-gray-300 text-xs text-right">${window.SHOP_CONFIG.location?.address || '4960 W Charleston Blvd'}, ${window.SHOP_CONFIG.location?.city || 'Las Vegas'}, ${window.SHOP_CONFIG.location?.state || 'NV'} ${window.SHOP_CONFIG.location?.zip || '89146'}</span>
+          <span class="text-gray-300 text-xs text-right">${window.SHOP_CONFIG?.location ? `${window.SHOP_CONFIG.location.address}, ${window.SHOP_CONFIG.location.city}, ${window.SHOP_CONFIG.location.state} ${window.SHOP_CONFIG.location.zip}` : '4960 W Charleston Blvd, Las Vegas, NV 89146'}</span>
         </div>
       </div>
     `;
@@ -596,9 +602,9 @@ function setupCalendarDownloads() {
   const gcalBtn = document.getElementById('add-to-gcal-btn');
   const icsBtn = document.getElementById('download-ics-btn');
 
-  const shopName = window.SHOP_CONFIG.shop?.name || 'Crowd Pleezers Barbershop';
-  const shopAddr = `${window.SHOP_CONFIG.location?.address || '4960 W Charleston Blvd'}, ${window.SHOP_CONFIG.location?.city || 'Las Vegas'}, ${window.SHOP_CONFIG.location?.state || 'NV'} ${window.SHOP_CONFIG.location?.zip || '89146'}`;
-  const shopPhone = window.SHOP_CONFIG.shop?.phone || '(702) 329-1212';
+  const shopName = window.SHOP_CONFIG?.shop?.name || 'Barbershop';
+  const shopAddr = window.SHOP_CONFIG?.location ? `${window.SHOP_CONFIG.location.address}, ${window.SHOP_CONFIG.location.city}, ${window.SHOP_CONFIG.location.state} ${window.SHOP_CONFIG.location.zip}` : '';
+  const shopPhone = window.SHOP_CONFIG?.shop?.phone || '';
 
   const title = encodeURIComponent(`Haircut Appointment @ ${shopName}`);
   const details = encodeURIComponent(`Appointment with ${bookingState.selectedBarber} for ${bookingState.selectedServices.join(', ')}.\nLocation: ${shopAddr}.\nPhone: ${shopPhone}`);
@@ -628,7 +634,7 @@ function setupCalendarDownloads() {
       const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
       const link = document.createElement('a');
       link.href = window.URL.createObjectURL(blob);
-      link.setAttribute('download', 'faded-times-appointment.ics');
+      link.setAttribute('download', 'appointment.ics');
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -675,13 +681,15 @@ function initLookbook() {
   galleryItems.forEach(item => {
     item.addEventListener('click', () => {
       const img = item.querySelector('img');
-      const caption = item.getAttribute('data-caption') || `Clean cut at ${window.SHOP_CONFIG.shop?.name || 'Crowd Pleezers'} #${window.SHOP_CONFIG.shop?.instagram || 'crowdpleezers'}`;
-      const barber = item.getAttribute('data-barber') || `${window.SHOP_CONFIG.shop?.name || 'Crowd Pleezers'} Master Barber`;
+      const shopName = window.SHOP_CONFIG?.shop?.name || 'Barbershop';
+      const shopIg = window.SHOP_CONFIG?.shop?.instagram || 'barbershop';
+      const caption = item.getAttribute('data-caption') || `Clean cut at ${shopName} #${shopIg}LV`;
+      const barber = item.getAttribute('data-barber') || `${shopName} Master Barber`;
 
       if (lightboxImg && img) {
         lightboxImg.src = img.src;
         lightboxCaption.innerText = caption;
-        lightboxBarber.innerText = `@${window.SHOP_CONFIG.shop?.instagram || 'crowdpleezers'} • Barber: ${barber}`;
+        lightboxBarber.innerText = `@${shopIg} • Barber: ${barber}`;
         lightboxModal.classList.add('active');
         document.body.style.overflow = 'hidden';
       }
