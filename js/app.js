@@ -1,5 +1,5 @@
 /**
- * BARBERSHOP TEMPLATE ENGINE (@fadedtimeslv)
+ * BARBERSHOP TEMPLATE ENGINE (@crowdpleezers)
  * Interactive Website JavaScript
  */
 
@@ -7,8 +7,8 @@
 if (!window.SHOP_CONFIG) {
   window.SHOP_CONFIG = {
     shop: {
-      name: "Faded Times Barbershop",
-      instagram: "fadedtimeslv"
+      name: "Crowd Pleezers Barbershop",
+      instagram: "crowdpleezers"
     },
     hours: {
       timezone: "America/Los_Angeles",
@@ -580,7 +580,7 @@ function submitBooking() {
         </div>
         <div class="flex justify-between items-center pt-1">
           <span class="text-gray-400 text-xs uppercase tracking-wider">Location</span>
-          <span class="text-gray-300 text-xs text-right">3868 W Sahara Ave, Las Vegas, NV 89102</span>
+          <span class="text-gray-300 text-xs text-right">${window.SHOP_CONFIG.location?.address || '4960 W Charleston Blvd'}, ${window.SHOP_CONFIG.location?.city || 'Las Vegas'}, ${window.SHOP_CONFIG.location?.state || 'NV'} ${window.SHOP_CONFIG.location?.zip || '89146'}</span>
         </div>
       </div>
     `;
@@ -596,9 +596,13 @@ function setupCalendarDownloads() {
   const gcalBtn = document.getElementById('add-to-gcal-btn');
   const icsBtn = document.getElementById('download-ics-btn');
 
-  const title = encodeURIComponent("Haircut Appointment @ Faded Times Barbershop");
-  const details = encodeURIComponent(`Appointment with ${bookingState.selectedBarber} for ${bookingState.selectedServices.join(', ')}.\nLocation: 3868 W Sahara Ave, Las Vegas, NV 89102.\nPhone: (702) 272-2457`);
-  const location = encodeURIComponent("3868 W Sahara Ave, Las Vegas, NV 89102");
+  const shopName = window.SHOP_CONFIG.shop?.name || 'Crowd Pleezers Barbershop';
+  const shopAddr = `${window.SHOP_CONFIG.location?.address || '4960 W Charleston Blvd'}, ${window.SHOP_CONFIG.location?.city || 'Las Vegas'}, ${window.SHOP_CONFIG.location?.state || 'NV'} ${window.SHOP_CONFIG.location?.zip || '89146'}`;
+  const shopPhone = window.SHOP_CONFIG.shop?.phone || '(702) 329-1212';
+
+  const title = encodeURIComponent(`Haircut Appointment @ ${shopName}`);
+  const details = encodeURIComponent(`Appointment with ${bookingState.selectedBarber} for ${bookingState.selectedServices.join(', ')}.\nLocation: ${shopAddr}.\nPhone: ${shopPhone}`);
+  const location = encodeURIComponent(shopAddr);
 
   if (gcalBtn) {
     gcalBtn.href = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&details=${details}&location=${location}`;
@@ -611,11 +615,11 @@ function setupCalendarDownloads() {
       const icsContent = [
         'BEGIN:VCALENDAR',
         'VERSION:2.0',
-        'PRODID:-//Faded Times Barbershop//EN',
+        `PRODID:-//${shopName}//EN`,
         'BEGIN:VEVENT',
-        `SUMMARY:Faded Times Barbershop Cut`,
-        `DESCRIPTION:Appointment with ${bookingState.selectedBarber} at 3868 W Sahara Ave, Las Vegas, NV`,
-        `LOCATION:3868 W Sahara Ave, Las Vegas, NV 89102`,
+        `SUMMARY:${shopName} Cut`,
+        `DESCRIPTION:Appointment with ${bookingState.selectedBarber} at ${shopAddr}`,
+        `LOCATION:${shopAddr}`,
         'STATUS:CONFIRMED',
         'END:VEVENT',
         'END:VCALENDAR'
@@ -671,13 +675,13 @@ function initLookbook() {
   galleryItems.forEach(item => {
     item.addEventListener('click', () => {
       const img = item.querySelector('img');
-      const caption = item.getAttribute('data-caption') || 'Clean cut at Faded Times Vegas #FadedTimesLV';
-      const barber = item.getAttribute('data-barber') || 'Faded Times Master Barber';
+      const caption = item.getAttribute('data-caption') || `Clean cut at ${window.SHOP_CONFIG.shop?.name || 'Crowd Pleezers'} #${window.SHOP_CONFIG.shop?.instagram || 'crowdpleezers'}`;
+      const barber = item.getAttribute('data-barber') || `${window.SHOP_CONFIG.shop?.name || 'Crowd Pleezers'} Master Barber`;
 
       if (lightboxImg && img) {
         lightboxImg.src = img.src;
         lightboxCaption.innerText = caption;
-        lightboxBarber.innerText = `@fadedtimeslv • Barber: ${barber}`;
+        lightboxBarber.innerText = `@${window.SHOP_CONFIG.shop?.instagram || 'crowdpleezers'} • Barber: ${barber}`;
         lightboxModal.classList.add('active');
         document.body.style.overflow = 'hidden';
       }
