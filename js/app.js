@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ==========================================================================
-   1. REAL-TIME SHOP STATUS (LAS VEGAS TIMEZONE: PST / PDT)
+   1. REAL-TIME SHOP STATUS (LOCAL TIMEZONE: PST / PDT)
    ========================================================================== */
 function initShopStatus() {
   const statusBadge = document.getElementById('shop-status-badge');
@@ -26,13 +26,14 @@ function initShopStatus() {
   const todayHoursRow = document.getElementById('today-hours-highlight');
 
   function updateStatus() {
-    // Get current time in America/Los_Angeles (Las Vegas)
+    // Get current time in shop timezone (America/Los_Angeles)
+    const timezone = window.SHOP_CONFIG?.hours?.timezone || 'America/Los_Angeles';
     const now = new Date();
-    const lvString = now.toLocaleString("en-US", { timeZone: "America/Los_Angeles" });
-    const lvDate = new Date(lvString);
-    const day = lvDate.getDay(); // 0 = Sun, 1 = Mon, 2 = Tue, ..., 6 = Sat
-    const hour = lvDate.getHours();
-    const minute = lvDate.getMinutes();
+    const localString = now.toLocaleString("en-US", { timeZone: timezone });
+    const localDate = new Date(localString);
+    const day = localDate.getDay(); // 0 = Sun, 1 = Mon, 2 = Tue, ..., 6 = Sat
+    const hour = localDate.getHours();
+    const minute = localDate.getMinutes();
     const timeDecimal = hour + minute / 60;
 
     let isOpen = false;
@@ -161,6 +162,13 @@ function initBookingSystem() {
   document.querySelectorAll('.direct-booksy-link').forEach(link => {
     link.href = getBooksyUrl();
   });
+
+  // Dynamically set shop monogram across all monogram badges
+  if (window.SHOP_CONFIG?.shop?.monogram) {
+    document.querySelectorAll('.shop-monogram').forEach(el => {
+      el.textContent = window.SHOP_CONFIG.shop.monogram;
+    });
+  }
 }
 
 function openBookingModal(preselectedServiceKey = null, preselectedBarber = null) {
@@ -495,7 +503,7 @@ function submitBooking() {
         </div>
         <div class="flex justify-between items-center pt-1">
           <span class="text-gray-400 text-xs uppercase tracking-wider">Location</span>
-          <span class="text-gray-300 text-xs text-right">${window.SHOP_CONFIG?.location ? `${window.SHOP_CONFIG.location.address}, ${window.SHOP_CONFIG.location.city}, ${window.SHOP_CONFIG.location.state} ${window.SHOP_CONFIG.location.zip}` : '4960 W Charleston Blvd, Las Vegas, NV 89146'}</span>
+          <span class="text-gray-300 text-xs text-right">${window.SHOP_CONFIG?.location ? `${window.SHOP_CONFIG.location.address}, ${window.SHOP_CONFIG.location.city}, ${window.SHOP_CONFIG.location.state} ${window.SHOP_CONFIG.location.zip}` : '740 S 4th St, Las Vegas, NV 89101'}</span>
         </div>
       </div>
     `;
@@ -628,12 +636,19 @@ function initLookbook() {
 function initFAQ() {
   const faqItems = document.querySelectorAll('.faq-item');
   faqItems.forEach(item => {
-    const header = item.querySelector('.faq-header');
+    const header = item.querySelector('.faq-header') || item.querySelector('.faq-toggle');
+    const content = item.querySelector('.faq-content');
+    if (!header) return;
     header.addEventListener('click', () => {
-      const isActive = item.classList.contains('active');
-      faqItems.forEach(i => i.classList.remove('active'));
-      if (!isActive) {
+      const isCurrentlyOpen = item.classList.contains('active') || (content && !content.classList.contains('hidden'));
+      faqItems.forEach(i => {
+        i.classList.remove('active');
+        const c = i.querySelector('.faq-content');
+        if (c) c.classList.add('hidden');
+      });
+      if (!isCurrentlyOpen) {
         item.classList.add('active');
+        if (content) content.classList.remove('hidden');
       }
     });
   });
@@ -835,6 +850,9 @@ function showToast(message, type = 'info') {
 
 // Global helper for promo copy
 window.copyPromoCode = function() {
-  navigator.clipboard.writeText('FADED10');
-  showToast('Promo Code "FADED10" copied to clipboard!', 'success');
+  const promo = window.SHOP_CONFIG?.business?.promoCode || window.SHOP_CONFIG?.shop?.promoCode || 'APEX10';
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(promo).catch(() => {});
+  }
+  showToast(`Promo Code "${promo}" copied to clipboard!`, 'success');
 };
