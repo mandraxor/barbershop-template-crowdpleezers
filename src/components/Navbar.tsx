@@ -39,10 +39,14 @@ export default function Navbar() {
       <header className="sticky top-0 z-50 backdrop-blur-xl bg-[#0B0D13]/90 border-b border-white/10 w-full">
         <div className="max-w-7xl mx-auto px-4 sm:px-8 h-20 flex items-center justify-between gap-4">
           
-          {/* Logo Monogram */}
+          {/* Crowned CH Logo */}
           <Link href="/" className="flex items-center space-x-3.5 group shrink-0">
-            <div className="w-11 h-11 border border-[#C5A059]/60 bg-[#141824] flex items-center justify-center shadow-lg group-hover:border-[#C5A059] transition-all shrink-0">
-              <span className="font-serif font-black text-sm text-[#DFBA68] tracking-tighter">CHB</span>
+            <div className="w-11 h-11 border border-[#C5A059]/40 bg-[#141824]/90 flex items-center justify-center shadow-lg group-hover:border-[#C5A059] transition-all shrink-0 p-1">
+              <img 
+                src="/assets/images/ch_logo_gold.png" 
+                alt="Centennial Hills Barbershop Logo" 
+                className="w-full h-full object-contain filter drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"
+              />
             </div>
             <div>
               <div className="font-serif font-bold text-sm sm:text-base tracking-[0.14em] text-[#F5F5F0] uppercase leading-none whitespace-nowrap">

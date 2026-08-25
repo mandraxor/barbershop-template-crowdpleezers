@@ -10,10 +10,17 @@ export default function Footer() {
         {/* Column 1: Brand & Philosophy */}
         <div className="space-y-4 md:col-span-1">
           <div className="flex items-center space-x-3">
-            <div className="w-9 h-9 border border-[#C5A059]/40 bg-[#141824] flex items-center justify-center text-[#DFBA68] font-serif font-bold text-xs">
-              CHB
+            <div className="w-10 h-10 border border-[#C5A059]/40 bg-[#141824] flex items-center justify-center p-1 shadow-md shrink-0">
+              <img 
+                src="/assets/images/ch_logo_gold.png" 
+                alt="Centennial Hills Barbershop Logo" 
+                className="w-full h-full object-contain"
+              />
             </div>
-            <span className="font-serif font-bold text-[#F5F5F0] text-sm tracking-wider">CENTENNIAL HILLS</span>
+            <div>
+              <div className="font-serif font-bold text-[#F5F5F0] text-sm tracking-wider leading-none">CENTENNIAL HILLS</div>
+              <p className="text-[9px] font-mono tracking-[0.18em] text-[#C5A059] uppercase mt-1 font-semibold">BARBERSHOP</p>
+            </div>
           </div>
           <p className="text-[#94A3B8] font-sans text-xs leading-relaxed font-normal">
             {config.shop.description}
