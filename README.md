@@ -1,86 +1,43 @@
-# Master Barbershop Website & Booking Template Engine
+# Centennial Hills Barbershop — Multi-Page Web Platform
 
-A high-converting, mobile-first, luxury barbershop website template and interactive booking engine. This repository serves as the **Master Template** for quickly spinning up customized websites for barbershops across any city or style.
-
-Current Master Reference Instance: **Apex Barber Lounge** (@apexbarberlounge), Metropolis, NV.
-
-![Apex Barber Lounge Hero Preview](assets/images/hero-interior.jpg)
+A luxury, high-performance multi-page web application for **Centennial Hills Barbershop** located in Centennial Crossroads Plaza, Northwest Las Vegas.
 
 ---
 
-## 💈 Quick Variation Generator
-
-You can instantly create a brand new custom website for any other barbershop:
-
-### 1. Define the Shop Profile
-Edit `shop-config.json` (or create a new `configs/my-shop.json`) with the new shop details:
-- Shop name, monogram, handles, coordinates, and phone number
-- Operating schedule and time zone
-- Color palette & theme (Gold, Emerald, Crimson, Royal, Obsidian)
-- Owners, Master Barbers, and active staff
-- Services menu, durations, and pricing
-- Client testimonials & Booksy booking URL
-
-### 2. Run the Variation Generator
-```bash
-node scripts/generate-variation.js --config configs/my-shop.json --out ../barbershop-myshop
-```
+## 💈 Business Overview
+* **Business Name**: Centennial Hills Barbershop
+* **Address**: 6420 Sky Pointe Dr #120, Las Vegas, NV 89131 (Centennial Crossroads Plaza)
+* **Phone**: (702) 515-1095
+* **Lead Barber**: Kash (Fade Architect & Master Barber)
+* **Ratings**: 4.4★ Google (196+ Reviews) • 5.0★ Booksy
+* **Hours**: Mon–Fri: 8:30 AM – 5:30 PM | Sat: 8:00 AM – 5:00 PM | Sun: Closed
+* **Walk-Ins**: Walk-Ins Welcomed Daily • Appointments via Booksy
 
 ---
 
-## 🌟 Key Features
-
-- **Real-Time Shop Status Indicator**: Dynamically calculates whether the shop is open or closed based on local shop time and displays live walk-in wait estimates.
-- **Interactive Multi-Step Booking Modal**:
-  - Step 1: Service selection (Signature Haircut, Haircut & Beard, Beard Trim, Kid's Cut, VIP Experience, etc.)
-  - Step 2: Barber selection (Any Available, Owners, Master Barbers, Staff)
-  - Step 3: Date & time slot picker
-  - Step 4: Instant booking confirmation with **Add to Google Calendar** and **.ICS download**
-- **Instagram Lookbook Feed**: Filterable gallery of skin fades, tapers, beard sculpts, and custom hair art designs with high-res Lightbox viewer.
-- **Meet The Master Barbers & Owners**: Team spotlights with specialties, badges, experience levels, and direct booking links.
-- **Client Testimonials & Reviews**: Filterable 5-star reviews (Locals, Tourists, Beard Care).
-- **Location & Directions**: Embedded map with 1-click Google Maps / Apple Maps directions.
-- **VIP Club**: Promo code generator unlocking first-visit discounts.
-- **Mobile Persistent Action Bar**: Sticky quick-dial, appointment booking, directions, and Instagram link.
+## 🚀 Routes
+- `/` — Home (Hero, Trust Badges, Top Services, Team Teaser, Verified Reviews)
+- `/services` — Services & Pricing Menu ("from $X" baseline pricing)
+- `/barbers` — Master Barbers Roster (Lead Barber Kash & Master Chairs)
+- `/lookbook` — Filterable Photo Gallery (Fades & Tapers, Beards & Shaves, Hair Art, Kids)
+- `/experience` — The Shop Story, Grooming Rituals & Amenities
+- `/contact` — Location, Hours, Google Map Embed, & FAQ
 
 ---
 
-## 🚀 Local Development
+## 🛠️ Build & Development
 
 ```bash
-# Clone master template
-git clone https://github.com/mandraxor/barbershop-template-fadedtimeslv.git
+# Install dependencies
+npm install
 
-# Navigate to directory
-cd barbershop-template-fadedtimeslv
+# Run local development server
+npm run dev
 
-# Serve locally
-npx serve .
-```
-
-Visit `http://localhost:3000` to view the website.
-
----
-
-## 📁 Project Structure
-
-```
-barbershop-template-fadedtimeslv/
-├── template.config.json       # Master shop data schema & configuration
-├── scripts/
-│   └── generate-variation.js # Rapid variation generator CLI
-├── index.html                # Main single-page application
-├── css/
-│   └── styles.css            # Dark luxury barbershop styling & animations
-├── js/
-│   └── app.js                # Booking engine, live clock, gallery & lightbox
-├── assets/
-│   └── images/               # Photography & haircut assets
-└── README.md                 # Documentation
+# Compile static multi-page export
+npm run build
 ```
 
 ---
 
-## 📄 License
-
-MIT License © 2026 Master Barbershop Template Engine
+© 2026 Centennial Hills Barbershop. All rights reserved.
