@@ -4,7 +4,7 @@ import { FadeIn } from '@/components/MotionWrapper';
 
 export const metadata = {
   title: `Contact, Location & Hours | ${config.shop.name}`,
-  description: `Visit ${config.shop.name} at ${config.location.address} in Charleston Decatur Center, Las Vegas NV 89146. Operating hours, parking directions, and FAQ.`,
+  description: `Visit ${config.shop.name} at ${config.location.address} in Centennial Crossroads Plaza, Las Vegas NV 89131. Operating hours, parking directions, and FAQ.`,
 };
 
 export default function ContactPage() {
@@ -14,9 +14,9 @@ export default function ContactPage() {
       {/* Header */}
       <FadeIn>
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-[#C5A059] font-mono text-xs uppercase tracking-[0.25em] block mb-2 font-semibold">Charleston Decatur Center</span>
+          <span className="text-[#C5A059] font-mono text-xs uppercase tracking-[0.25em] block mb-2 font-semibold">Centennial Crossroads Plaza</span>
           <h1 className="font-serif font-black text-3xl sm:text-6xl text-[#F5F5F0] uppercase tracking-tight break-words">Location & Contact</h1>
-          <p className="text-[#94A3B8] text-xs sm:text-sm font-sans mt-3">4960 W Charleston Blvd, Las Vegas, NV 89146 • Charleston & Decatur</p>
+          <p className="text-[#94A3B8] text-xs sm:text-sm font-sans mt-3">6420 Sky Pointe Dr #120, Las Vegas, NV 89131 • Sky Pointe & Tenaya</p>
         </div>
       </FadeIn>
 
@@ -75,7 +75,7 @@ export default function ContactPage() {
             style={{ border: 0 }} 
             allowFullScreen={true} 
             loading="lazy" 
-            title="Crowd Pleezers Barbershop Map"
+            title="Centennial Hills Barbershop Map"
           />
         </div>
 

@@ -37,14 +37,14 @@ export default function HomePage() {
 
           <FadeIn delay={0.2}>
             <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-serif tracking-tight text-[#F5F5F0] leading-none mb-6">
-              MULTI-CULTURAL CUTS.<br />
-              <span className="italic font-light text-[#C5A059]">PRECISION GROOMING.</span>
+              PRECISION FADES.<br />
+              <span className="italic font-light text-[#C5A059]">CLASSIC GROOMING.</span>
             </h1>
           </FadeIn>
 
           <FadeIn delay={0.3}>
             <p className="max-w-2xl text-[#94A3B8] text-sm sm:text-base md:text-lg mb-10 font-sans leading-relaxed">
-              Las Vegas premier destination for precision skin fades, beard sculpting, tapers, freestyle hair art, and professional protective braiding.
+              Centennial Hills premier barbershop featuring Lead Barber Kash and master craftsmen. Specializing in skin fades, beard sculpting, straight-razor detailing, and classic cuts. Walk-ins welcomed daily.
             </p>
           </FadeIn>
 
@@ -73,11 +73,11 @@ export default function HomePage() {
         <div className="absolute bottom-8 left-0 right-0 z-10 border-t border-white/10 pt-4 max-w-6xl mx-auto px-6 flex justify-between items-center text-xs text-[#94A3B8] font-mono">
           <div className="flex items-center gap-2">
             <Clock className="w-3.5 h-3.5 text-[#C5A059]" />
-            <span>Tue – Sat: 9:00 AM – 4:00 PM</span>
+            <span>M-F 8:30-5:30 | Sat 8:00-5:00</span>
           </div>
           <div className="hidden sm:flex items-center gap-2">
             <Star className="w-3.5 h-3.5 text-[#C5A059] fill-[#C5A059]" />
-            <span>{config.shop.rating} Stars ({config.shop.reviewCount} Reviews)</span>
+            <span>{config.shop.rating}★ Google ({config.shop.reviewCount} Reviews) • 5.0★ Booksy</span>
           </div>
           <div className="flex items-center gap-2">
             <Phone className="w-3.5 h-3.5 text-[#C5A059]" />
@@ -88,24 +88,24 @@ export default function HomePage() {
       </section>
 
 
-      {/* 2. QUICK STATS BAR */}
+      {/* 2. TRUST BADGES & STATS BAR */}
       <section className="bg-[#07090D] border-y border-white/10 py-12 px-6">
         <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center font-mono">
           <div>
-            <p className="font-serif text-3xl sm:text-4xl text-[#DFBA68] font-bold">4.9 ★</p>
-            <p className="text-xs text-[#94A3B8] uppercase tracking-widest mt-1">480+ Booksy Reviews</p>
+            <p className="font-serif text-3xl sm:text-4xl text-[#DFBA68] font-bold">196+ Reviews</p>
+            <p className="text-xs text-[#94A3B8] uppercase tracking-widest mt-1">4.4★ Google Rated</p>
           </div>
           <div>
-            <p className="font-serif text-3xl sm:text-4xl text-[#F5F5F0] font-bold">8+ Yrs</p>
-            <p className="text-xs text-[#94A3B8] uppercase tracking-widest mt-1">Master Barber Craft</p>
+            <p className="font-serif text-3xl sm:text-4xl text-[#F5F5F0] font-bold">5.0 ★</p>
+            <p className="text-xs text-[#94A3B8] uppercase tracking-widest mt-1">Top Rated On Booksy</p>
           </div>
           <div>
-            <p className="font-serif text-3xl sm:text-4xl text-[#DFBA68] font-bold">4 Chairs</p>
-            <p className="text-xs text-[#94A3B8] uppercase tracking-widest mt-1">Expert Barbers On Staff</p>
+            <p className="font-serif text-3xl sm:text-4xl text-[#DFBA68] font-bold">Lead: Kash</p>
+            <p className="text-xs text-[#94A3B8] uppercase tracking-widest mt-1">Master Barber Staff</p>
           </div>
           <div>
-            <p className="font-serif text-3xl sm:text-4xl text-[#F5F5F0] font-bold">Decatur</p>
-            <p className="text-xs text-[#94A3B8] uppercase tracking-widest mt-1">Charleston Decatur Plaza</p>
+            <p className="font-serif text-3xl sm:text-4xl text-[#F5F5F0] font-bold">Centennial</p>
+            <p className="text-xs text-[#94A3B8] uppercase tracking-widest mt-1">Crossroads Plaza (89131)</p>
           </div>
         </div>
       </section>
@@ -117,7 +117,7 @@ export default function HomePage() {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16">
           <div>
             <span className="text-xs uppercase tracking-[0.25em] text-[#C5A059] font-mono">Precision Menu</span>
-            <h2 className="text-3xl sm:text-5xl font-serif text-[#F5F5F0] mt-2">Signature Grooming Services</h2>
+            <h2 className="text-3xl sm:text-5xl font-serif text-[#F5F5F0] mt-2">Signature Barber Services</h2>
           </div>
           <Link href="/services" className="btn-brass-outline mt-6 md:mt-0 text-xs font-mono">
             View All Services & Pricing →
@@ -130,7 +130,7 @@ export default function HomePage() {
               <div>
                 <div className="flex justify-between items-baseline mb-3">
                   <h3 className="font-serif font-bold text-xl text-[#F5F5F0] group-hover:text-[#C5A059] transition-colors">{service.name}</h3>
-                  <span className="font-mono text-lg text-[#C5A059] font-bold">{service.price}</span>
+                  <span className="font-mono text-base text-[#C5A059] font-bold">{service.price}</span>
                 </div>
                 <p className="text-xs text-[#94A3B8] font-sans leading-relaxed mb-6">
                   {service.description}
@@ -192,7 +192,7 @@ export default function HomePage() {
       </section>
 
 
-      {/* 5. TOP 3 VERIFIED REVIEWS */}
+      {/* 5. TOP VERIFIED REVIEWS */}
       <section className="py-24 max-w-7xl mx-auto px-6 border-b border-white/10">
         
         <div className="text-center max-w-xl mx-auto mb-16">
@@ -226,10 +226,10 @@ export default function HomePage() {
       {/* 6. GLOBAL BOOKING CTA BANNER */}
       <section className="py-20 max-w-7xl mx-auto px-6">
         <div className="border border-[#C5A059]/40 bg-[#07090D] p-8 sm:p-14 text-center space-y-6">
-          <span className="text-xs uppercase tracking-[0.25em] text-[#C5A059] font-mono">Walk-ins Welcome Daily</span>
-          <h2 className="font-serif text-3xl sm:text-5xl text-[#F5F5F0]">Ready For A Clean Fade?</h2>
+          <span className="text-xs uppercase tracking-[0.25em] text-[#C5A059] font-mono">Walk-ins Welcomed Daily</span>
+          <h2 className="font-serif text-3xl sm:text-5xl text-[#F5F5F0]">Ready For A Precision Cut?</h2>
           <p className="text-sm text-[#94A3B8] font-sans max-w-xl mx-auto">
-            Book your appointment online via Booksy 24/7 or walk right in to Charleston Decatur Center in Las Vegas.
+            Book your appointment online via Booksy 24/7 or walk right in to Centennial Crossroads Plaza in Northwest Las Vegas.
           </p>
           <div className="flex flex-wrap justify-center gap-4 pt-2">
             <a href={config.shop.booksyUrl} target="_blank" rel="noreferrer" className="btn-brass-primary">

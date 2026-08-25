@@ -4,7 +4,7 @@ import { FadeIn } from '@/components/MotionWrapper';
 
 export const metadata = {
   title: `The Experience & Story | ${config.shop.name}`,
-  description: `Learn about the Crowd Pleezers experience in Las Vegas: our shop story, hot towel straight-razor ritual, lounge amenities, and verified reviews.`,
+  description: `Learn about the Centennial Hills Barbershop experience in Las Vegas: our shop story, hot towel straight-razor ritual, lounge amenities, and verified reviews.`,
 };
 
 export default function ExperiencePage() {
@@ -33,11 +33,11 @@ export default function ExperiencePage() {
 
   const amenities = [
     "Plush Heavy Leather Barber Chairs",
-    "Complimentary Craft Beverages & Espresso",
-    "High-Speed Wi-Fi & Lounge Seating",
+    "Complimentary Craft Beverages & Refreshments",
+    "High-Speed Wi-Fi & Comfortable Lounge",
     "Clean, Sanitized Japanese Steel Tools",
-    "5.0 Star Rated Master Barber Staff",
-    "Ample Free Plaza Parking (Charleston Decatur Center)"
+    "Lead Barber Kash & Master Barber Staff",
+    "Ample Free Plaza Parking (Centennial Crossroads)"
   ];
 
   return (
@@ -47,8 +47,8 @@ export default function ExperiencePage() {
       <FadeIn>
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-[#C5A059] font-mono text-xs uppercase tracking-[0.25em] block mb-2 font-semibold">The Standard</span>
-          <h1 className="font-serif font-black text-3xl sm:text-6xl text-[#F5F5F0] uppercase tracking-tight break-words">The Crowd Pleezers Experience</h1>
-          <p className="text-[#94A3B8] text-xs sm:text-sm font-sans mt-3">Where multi-cultural hair artistry meets modern precision craftsmanship.</p>
+          <h1 className="font-serif font-black text-3xl sm:text-6xl text-[#F5F5F0] uppercase tracking-tight break-words">The Centennial Hills Experience</h1>
+          <p className="text-[#94A3B8] text-xs sm:text-sm font-sans mt-3">Where Northwest Las Vegas tradition meets modern precision craftsmanship.</p>
         </div>
       </FadeIn>
 
@@ -56,16 +56,16 @@ export default function ExperiencePage() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-24 border-b border-white/10 pb-20">
         <div className="lg:col-span-6 space-y-6">
           <span className="text-xs font-mono text-[#C5A059] uppercase tracking-widest">Our Story</span>
-          <h2 className="font-serif text-3xl sm:text-4xl text-[#F5F5F0]">Charleston's Multi-Cultural Barbershop of Choice</h2>
+          <h2 className="font-serif text-3xl sm:text-4xl text-[#F5F5F0]">Centennial Hills Barbershop of Choice</h2>
           <p className="text-sm text-[#94A3B8] font-sans leading-relaxed">
-            Founded with a commitment to versatile, multi-cultural hair artistry, Crowd Pleezers Barbershop is situated in Charleston Decatur Center at W Charleston Blvd & Decatur Blvd. We specialize in precision skin fades, sharp razor lineups, beard tapering, and protective cornrow braiding.
+            Located in the heart of Centennial Crossroads Plaza at 6420 Sky Pointe Dr #120, Centennial Hills Barbershop was established to bring high-standard master barber craftsmanship and genuine community hospitality to Northwest Las Vegas.
           </p>
           <p className="text-sm text-[#94A3B8] font-sans leading-relaxed">
-            Our talented team treats every client with genuine hospitality, ensuring you leave our chairs looking and feeling your absolute best.
+            Led by master barber Kash, our dedicated team takes pride in every cut—from surgical skin fades and classic scissor tapers to hot lather razor shaves and patient precision kids cuts.
           </p>
         </div>
         <div className="lg:col-span-6 h-80 sm:h-96 border border-white/10 overflow-hidden bg-black">
-          <img src="/assets/images/lounge-interior.jpg" alt="Crowd Pleezers Barbershop Lounge" className="w-full h-full object-cover" />
+          <img src="/assets/images/lounge-interior.jpg" alt="Centennial Hills Barbershop Lounge" className="w-full h-full object-cover" />
         </div>
       </div>
 

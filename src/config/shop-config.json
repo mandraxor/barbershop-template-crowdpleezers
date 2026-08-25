@@ -1,221 +1,242 @@
 {
   "shop": {
-    "name": "Crowd Pleezers Barbershop",
-    "shortName": "Crowd Pleezers",
-    "monogram": "CP",
+    "name": "Centennial Hills Barbershop",
+    "shortName": "Centennial Hills",
+    "monogram": "CHB",
     "badge": "LV",
-    "tagline": "Multi-Cultural Cuts. Precision Grooming.",
-    "subTagline": "Las Vegas Barbershop & Braiding",
-    "description": "Las Vegas premier multi-cultural barbershop located at 4960 W Charleston Blvd, Las Vegas, NV 89146 in Charleston Decatur Center. Specializing in professional skin fades, beard sculpting, precision tapers, custom designs, and professional braiding & locs services.",
-    "phone": "(702) 329-1212",
-    "phoneRaw": "7023291212",
-    "email": "info@crowdpleezerslv.com",
-    "website": "https://crowdpleezerslv.com",
-    "address": "4960 W Charleston Blvd, Las Vegas, NV 89146",
-    "crossStreets": "Charleston Blvd & Decatur Blvd",
-    "plaza": "Charleston Decatur Center",
+    "tagline": "Precision Fades. Classic Grooming.",
+    "subTagline": "Centennial Hills Premier Barbershop",
+    "description": "Centennial Hills premier modern barbershop located at 6420 Sky Pointe Dr #120, Las Vegas, NV 89131 in Centennial Crossroads Plaza. Specializing in precision skin tapers, straight-razor detailing, beard sculpting, kids cuts, and classic gentleman haircuts. Walk-ins welcomed daily.",
+    "phone": "(702) 515-1095",
+    "phoneRaw": "7025151095",
+    "email": "contact@centennialhillsbarbershop.com",
+    "website": "https://centennialhillsbarbershop.com",
+    "address": "6420 Sky Pointe Dr #120, Las Vegas, NV 89131",
+    "crossStreets": "Sky Pointe Dr & N Tenaya Way",
+    "plaza": "Centennial Crossroads Plaza",
     "city": "Las Vegas",
     "state": "NV",
-    "zip": "89146",
-    "booksyUrl": "https://booksy.com/en-us/581467_crowd-pleezers-barbershop_barber-shop_29251_las-vegas#ba_s=seo",
-    "instagram": "@crowdpleezers",
-    "instagramUrl": "https://www.instagram.com/crowdpleezers/",
-    "rating": "4.9",
-    "reviewCount": "480+",
-    "yearsExperience": "8+ Years"
+    "zip": "89131",
+    "booksyUrl": "https://booksy.com/en-us/117961_centennial-hills-barbershop_barber-shop_29251_las-vegas",
+    "instagram": "@centennialhillsbarbershop",
+    "instagramUrl": "https://www.instagram.com/centennialhillsbarbershop/",
+    "rating": "4.4",
+    "googleReviewCount": "196+",
+    "booksyRating": "5.0",
+    "reviewCount": "196+",
+    "yearsExperience": "10+ Years"
   },
   "location": {
-    "plaza": "Charleston Decatur Center",
-    "address": "4960 W Charleston Blvd",
-    "crossStreet": "Charleston Blvd & Decatur Blvd",
+    "plaza": "Centennial Crossroads Plaza",
+    "address": "6420 Sky Pointe Dr #120",
+    "crossStreet": "Sky Pointe Dr & N Tenaya Way",
     "city": "Las Vegas",
     "state": "NV",
-    "zip": "89146",
-    "directions": "Conveniently located inside Charleston Decatur Center at W Charleston Blvd & S Decatur Blvd. Plenty of free plaza parking directly in front of the shop.",
-    "googleMapsUrl": "https://maps.google.com/?q=4960+W+Charleston+Blvd+Las+Vegas+NV+89146",
-    "appleMapsUrl": "https://maps.apple.com/?address=4960+W+Charleston+Blvd,Las+Vegas,NV+89146",
-    "mapEmbedUrl": "https://maps.google.com/maps?q=4960%20W%20Charleston%20Blvd%20Las%20Vegas%20NV%2089146&t=&z=14&ie=UTF8&iwloc=&output=embed"
+    "zip": "89131",
+    "directions": "Conveniently located inside Centennial Crossroads Plaza at 6420 Sky Pointe Dr #120 near N Tenaya Way & N Durango Dr in Northwest Las Vegas. Easy highway access from US-95 with ample free plaza parking directly in front of the shop.",
+    "googleMapsUrl": "https://maps.google.com/?q=6420+Sky+Pointe+Dr+%23120+Las+Vegas+NV+89131",
+    "appleMapsUrl": "https://maps.apple.com/?address=6420+Sky+Pointe+Dr,Suite+120,Las+Vegas,NV+89131",
+    "mapEmbedUrl": "https://maps.google.com/maps?q=6420%20Sky%20Pointe%20Dr%20%23120%20Las%20Vegas%20NV%2089131&t=&z=14&ie=UTF8&iwloc=&output=embed"
   },
   "hours": {
     "schedule": [
       {
-        "days": "Tuesday – Saturday",
-        "hours": "9:00 AM – 4:00 PM",
+        "days": "Monday – Friday",
+        "hours": "8:30 AM – 5:30 PM",
         "isOpen": true
       },
       {
-        "days": "Sunday & Monday",
+        "days": "Saturday",
+        "hours": "8:00 AM – 5:00 PM",
+        "isOpen": true
+      },
+      {
+        "days": "Sunday",
         "hours": "Closed",
         "isOpen": false
       }
     ],
-    "walkinPolicy": "Walk-ins Welcome Daily • Appointments Recommended on Booksy"
+    "walkinPolicy": "Walk-Ins Welcomed Daily • Appointments Available via Booksy"
   },
   "barbers": [
     {
-      "id": "mir-the-barber",
-      "name": "Mir The Barber",
-      "title": "Master Barber & Shop Lead",
+      "id": "kash",
+      "name": "Kash",
+      "title": "Lead Master Barber & Fade Architect",
       "chair": "Chair 01",
       "status": "Available",
-      "experience": "8+ Years",
+      "experience": "10+ Years",
       "image": "/assets/images/barber-master.jpg",
       "specialties": [
-        "Skin Fades",
+        "Precision Skin Fades",
         "Razor Lineups",
         "Beard Sculpting"
       ],
-      "bio": "Lead master barber specializing in precision skin fades, sharp straight-razor line-ups, and volumetric beard sculpts across all hair textures.",
-      "booksyUrl": "https://booksy.com/en-us/581467_crowd-pleezers-barbershop_barber-shop_29251_las-vegas#ba_s=seo"
+      "bio": "Lead master barber renowned throughout Centennial Hills for surgical blend transitions, crisp razor line-ups, and unmatched client loyalty.",
+      "booksyUrl": "https://booksy.com/en-us/117961_centennial-hills-barbershop_barber-shop_29251_las-vegas"
     },
     {
-      "id": "major-fadez",
-      "name": "Major Fadez",
-      "title": "Senior Fade & Taper Stylist",
+      "id": "marcus-vance",
+      "name": "Marcus 'Edge' Vance",
+      "title": "Master Barber & Beard Specialist",
       "chair": "Chair 02",
       "status": "Available",
       "experience": "8+ Years",
       "image": "/assets/images/fade-textured.jpg",
       "specialties": [
         "Low Tapers",
-        "Textured Crops",
-        "Drop Fades"
+        "Hot Towel Shaves",
+        "Beard Grooming"
       ],
-      "bio": "Known for high contrast tapers, textured crops, and clean geometric hairline detailing on modern and classic silhouettes.",
-      "booksyUrl": "https://booksy.com/en-us/581467_crowd-pleezers-barbershop_barber-shop_29251_las-vegas#ba_s=seo"
+      "bio": "Specializes in high-contrast tapers, sculpted beard contours, and traditional hot lather straight-razor shave rituals.",
+      "booksyUrl": "https://booksy.com/en-us/117961_centennial-hills-barbershop_barber-shop_29251_las-vegas"
     },
     {
-      "id": "hairanesa",
-      "name": "Hairanesa",
-      "title": "Master Barber & Braiding Expert",
+      "id": "anthony-cole",
+      "name": "Anthony 'Precision' Cole",
+      "title": "Senior Stylist & Classic Cut Specialist",
       "chair": "Chair 03",
       "status": "Available",
-      "experience": "10+ Years",
-      "image": "/assets/images/kids-cut.jpg",
+      "experience": "9+ Years",
+      "image": "/assets/images/low-taper-beard.jpg",
       "specialties": [
-        "Precision Haircuts",
-        "Cornrows",
-        "Loc Maintenance"
+        "Classic Scissor Cuts",
+        "Textured Crops",
+        "Senior Grooming"
       ],
-      "bio": "Dual-threat master stylist offering clean fades, precision perimeter line-ups, and neat protective cornrow & loc styling.",
-      "booksyUrl": "https://booksy.com/en-us/581467_crowd-pleezers-barbershop_barber-shop_29251_las-vegas#ba_s=seo"
+      "bio": "Expert in shears craftsmanship, natural textured flow, executive comb-overs, and timeless gentleman's hairstyles.",
+      "booksyUrl": "https://booksy.com/en-us/117961_centennial-hills-barbershop_barber-shop_29251_las-vegas"
     },
     {
-      "id": "donscreationz",
-      "name": "Donscreationz",
-      "title": "Creative Hair Artist & Stylist",
+      "id": "leo-reed",
+      "name": "Leo 'Artisan' Reed",
+      "title": "Creative Hair Artist & Kids Specialist",
       "chair": "Chair 04",
       "status": "Available",
       "experience": "7+ Years",
       "image": "/assets/images/hair-design.jpg",
       "specialties": [
-        "Freestyle Hair Art",
-        "Geometric Parts",
-        "Kids Styling"
+        "Custom Razor Parts",
+        "Kids Tapers",
+        "Hair Art"
       ],
-      "bio": "Turns haircuts into canvas artwork with custom freestyle razor designs, crisp parts, and gentle, sharp kids cuts.",
-      "booksyUrl": "https://booksy.com/en-us/581467_crowd-pleezers-barbershop_barber-shop_29251_las-vegas#ba_s=seo"
+      "bio": "Known for clean geometric razor designs, sharp parts, and patient, gentle precision cuts for young gentlemen.",
+      "booksyUrl": "https://booksy.com/en-us/117961_centennial-hills-barbershop_barber-shop_29251_las-vegas"
     }
   ],
   "serviceCategories": [
     {
-      "category": "Haircuts",
-      "description": "Multi-cultural precision clipper fading, head contouring, and scissor work",
+      "category": "Precision Haircuts",
+      "description": "Tailored clipper fading, classic scissor silhouettes, and razor neck cleanup",
       "services": [
         {
           "name": "Signature Haircut",
-          "price": "$35",
+          "price": "from $35",
           "duration": "40 min",
           "popular": true,
-          "description": "Precision skin fade, taper, or classic scissor cut tailored to your head shape, completed with razor lineup and styling."
+          "description": "Consultation, precision clipper or scissor cut tailored to head contours, hot lather razor neck cleanup, and styled finish."
         },
         {
-          "name": "Skin Fade & Style",
-          "price": "$40",
+          "name": "Skin Fade & Taper",
+          "price": "from $45",
           "duration": "45 min",
-          "popular": false,
-          "description": "Zero-gap foil shaver skin fade, clean hairline detailing, textured top work, and premium styling product."
+          "popular": true,
+          "description": "Zero-gap foil shaver skin taper or drop fade, clean perimeter detailing, textured top work, and premium styling product."
         },
         {
           "name": "Classic Scissor Cut",
-          "price": "$35",
+          "price": "from $35",
           "duration": "40 min",
           "popular": false,
-          "description": "All-scissor or comb-over scissor work for longer styles, gentleman's parts, and textured natural flow."
+          "description": "All-scissor or comb-over styling for medium to long hair lengths, executive parts, and textured natural movement."
+        },
+        {
+          "name": "Military & First Responder Cut",
+          "price": "from $35",
+          "duration": "35 min",
+          "popular": false,
+          "description": "Discounted precision high & tight, regulation taper, or crew cut for active/retired military personnel and first responders."
         }
       ]
     },
     {
-      "category": "Combos",
+      "category": "Combos & Packages",
       "description": "Complete head and beard grooming packages for an all-inclusive finish",
       "services": [
         {
           "name": "Haircut & Beard Sculpt",
-          "price": "$45",
-          "duration": "50 min",
+          "price": "from $65",
+          "duration": "55 min",
           "popular": true,
-          "description": "Full signature haircut paired with hot towel beard shaping, razor line definition, and nourishing organic beard oil."
+          "description": "Full signature haircut paired with hot towel beard shaping, crisp razor cheek/neckline definition, and nourishing beard oil."
         },
         {
-          "name": "Deluxe Haircut & Shave",
-          "price": "$55",
+          "name": "Deluxe Cut & Hot Towel Shave",
+          "price": "from $70",
           "duration": "60 min",
           "popular": false,
           "description": "Custom haircut combined with a full traditional hot lather double-pass straight-razor shave with essential oil steam."
+        },
+        {
+          "name": "New Client Cut & Beard Special",
+          "price": "from $40",
+          "duration": "50 min",
+          "popular": true,
+          "description": "First-visit promotional rate: Signature precision haircut combined with straight-razor beard cleanup and hot towel refresh."
         }
       ]
     },
     {
-      "category": "Beards & Shaves",
-      "description": "Japanese steel double-pass precision and organic essential oil steam rituals",
+      "category": "Beard & Shave Rituals",
+      "description": "Japanese steel double-pass precision and eucalyptus essential oil steam rituals",
       "services": [
         {
-          "name": "Beard Trim & Razor Edge",
-          "price": "$25",
+          "name": "Beard Trim & Straight Razor Edge",
+          "price": "from $30",
           "duration": "30 min",
           "popular": false,
           "description": "Hot lather straight-razor cheek & neckline edging, volumetric beard reduction, clipper shaping, and warm towel treatment."
         },
         {
           "name": "Hot Towel Straight Razor Shave",
-          "price": "$30",
-          "duration": "30 min",
+          "price": "from $35",
+          "duration": "35 min",
           "popular": true,
-          "description": "Traditional double-pass straight-razor facial shave with warm essential oil steam, rich lather, and revitalizing balm."
+          "description": "Traditional double-pass straight-razor facial shave with warm essential oil steam, rich lather, and revitalizing aftershave balm."
         },
         {
-          "name": "Razor Head Shave",
-          "price": "$30",
+          "name": "Head Shave with Straight Razor",
+          "price": "from $35",
           "duration": "30 min",
           "popular": false,
-          "description": "Complete scalp shave using Japanese steel straight razors, warm lather, and soothing moisturizing scalp massage."
+          "description": "Complete scalp shave using Japanese surgical steel razors, warm lather, and soothing moisturizing scalp massage."
         }
       ]
     },
     {
-      "category": "Kids & Braiding",
-      "description": "Gentle precision styling for young gentlemen and protective braiding styles",
+      "category": "Kids & Detailing",
+      "description": "Gentle precision styling for young gentlemen and perimeter maintenance",
       "services": [
         {
           "name": "Kid's Signature Cut (12 & Under)",
-          "price": "$25",
+          "price": "$35",
           "duration": "30 min",
           "popular": false,
-          "description": "Patient, gentle, and sharp haircut for young gentlemen. Any modern style, fade, or design part."
+          "description": "Patient, gentle, and sharp haircut for young gentlemen. Any modern style, skin taper, or design part."
         },
         {
           "name": "Line Up / Shape Up",
-          "price": "$20",
+          "price": "from $30",
           "duration": "20 min",
           "popular": false,
-          "description": "Crisp hairline perimeter detailing, temple taper, razor neck cleanup, and aftershave tonic to refresh your existing cut."
+          "description": "Crisp hairline perimeter detailing, temple cleanup, razor neck outlining, and aftershave tonic to refresh your existing cut."
         },
         {
-          "name": "Men's Cornrows & Taper",
-          "price": "$65",
-          "duration": "60 min",
-          "popular": true,
-          "description": "Neat protective cornrow braiding paired with a crisp temple taper and razor line-up."
+          "name": "Line Up with Color Enhancement",
+          "price": "from $35",
+          "duration": "25 min",
+          "popular": false,
+          "description": "Perimeter hairline lineup accentuated with professional semi-permanent organic color enhancements for high-definition contrast."
         }
       ]
     },
@@ -225,10 +246,10 @@
       "services": [
         {
           "name": "VIP Executive Experience",
-          "price": "$65",
+          "price": "from $80",
           "duration": "75 min",
           "popular": true,
-          "description": "The ultimate service: Custom haircut, hot lather straight-razor shave/beard sculpt, eucalyptus hot towel, face scrub, and scalp massage."
+          "description": "The ultimate service: Custom haircut, hot lather straight-razor shave/beard sculpt, eucalyptus hot towel, exfoliating face scrub, and scalp massage."
         }
       ]
     }
@@ -238,9 +259,9 @@
       "id": 1,
       "category": "fades",
       "categoryLabel": "Fades & Tapers",
-      "title": "Razor Low Drop Fade",
+      "title": "Precision Skin Drop Fade",
       "image": "/assets/images/mid-drop-fade.jpg",
-      "barber": "Mir The Barber"
+      "barber": "Kash"
     },
     {
       "id": 2,
@@ -248,7 +269,7 @@
       "categoryLabel": "Beards & Shaves",
       "title": "Sculpted Beard & Razor Line",
       "image": "/assets/images/low-taper-beard.jpg",
-      "barber": "Major Fadez"
+      "barber": "Marcus Vance"
     },
     {
       "id": 3,
@@ -256,15 +277,15 @@
       "categoryLabel": "Fades & Tapers",
       "title": "Textured Crop Fade",
       "image": "/assets/images/fade-textured.jpg",
-      "barber": "Mir The Barber"
+      "barber": "Kash"
     },
     {
       "id": 4,
       "category": "art",
       "categoryLabel": "Hair Art",
-      "title": "Freestyle Geometric Art",
+      "title": "Custom Razor Part & Blend",
       "image": "/assets/images/hair-design.jpg",
-      "barber": "Donscreationz"
+      "barber": "Leo Reed"
     },
     {
       "id": 5,
@@ -272,7 +293,7 @@
       "categoryLabel": "Kids",
       "title": "Kids Clean Skin Taper",
       "image": "/assets/images/kids-cut.jpg",
-      "barber": "Hairanesa"
+      "barber": "Leo Reed"
     },
     {
       "id": 6,
@@ -280,50 +301,50 @@
       "categoryLabel": "Beards & Shaves",
       "title": "Straight Razor Hot Shave",
       "image": "/assets/images/beard-shave.jpg",
-      "barber": "Major Fadez"
+      "barber": "Marcus Vance"
     }
   ],
   "reviews": [
     {
-      "author": "Marcus T.",
-      "role": "Decatur Area Regular",
+      "author": "David R.",
+      "role": "Centennial Hills Regular",
       "rating": 5,
-      "date": "2 days ago",
-      "text": "Best multi-cultural barbershop in Vegas. Mir always delivers the cleanest skin fade and razor lineup. Clean shop, friendly vibe, and zero hassle.",
-      "cut": "Signature Haircut & Beard",
-      "barber": "Mir The Barber"
+      "date": "3 days ago",
+      "text": "Kash is hands down the best barber in Northwest Las Vegas. Unmatched precision on skin fades and razor lineups. The shop is always clean and welcoming.",
+      "cut": "Skin Fade & Taper",
+      "barber": "Kash"
     },
     {
-      "author": "Devon K.",
+      "author": "Brandon M.",
       "role": "Verified Client",
       "rating": 5,
       "date": "1 week ago",
-      "text": "Hairanesa is unmatched with braids and tapers! Tight lines, painless styling, and great energy. My go-to spot.",
-      "cut": "Men's Cornrows & Taper",
-      "barber": "Hairanesa"
+      "text": "Great vibe in Centennial Crossroads Plaza. Marcus hooked me up with a crisp beard trim and hot towel shave. Found my go-to shop in 89131.",
+      "cut": "Haircut & Beard Sculpt",
+      "barber": "Marcus Vance"
     },
     {
-      "author": "Jordan M.",
-      "role": "Local Regular",
+      "author": "Greg S.",
+      "role": "Local Resident",
       "rating": 5,
       "date": "2 weeks ago",
-      "text": "Major Fadez hooked me up with a crisp drop fade and beard sculpt. Hot towel was refreshing. Highly recommend Crowd Pleezers!",
-      "cut": "VIP Executive Experience",
-      "barber": "Major Fadez"
+      "text": "Top tier barbershop in Centennial Hills. Professional service, fair prices, and great attention to detail. Leo was great with my son's cut too.",
+      "cut": "Signature Haircut",
+      "barber": "Anthony Cole"
     }
   ],
   "faqs": [
     {
       "q": "Do you accept walk-ins or are appointments required?",
-      "a": "Walk-ins are welcomed Tuesday through Saturday from 9:00 AM to 4:00 PM! To guarantee immediate chair availability with your preferred barber, we recommend reserving on Booksy."
+      "a": "Walk-ins are always welcomed daily during regular business hours! To guarantee immediate chair availability with Lead Barber Kash or your preferred barber, you can book online in advance via Booksy."
     },
     {
       "q": "Where are you located and is there parking available?",
-      "a": "We are located at 4960 W Charleston Blvd, Las Vegas, NV 89146 in Charleston Decatur Center. We have ample, free parking directly in front of the shop."
+      "a": "We are located at 6420 Sky Pointe Dr #120, Las Vegas, NV 89131 inside Centennial Crossroads Plaza (near Sky Pointe Dr & N Tenaya Way). Free, spacious plaza parking is located directly in front of our shop."
     },
     {
-      "q": "Do you offer braiding and locs services?",
-      "a": "Yes! Hairanesa specializes in professional men's and women's cornrows, protective braid styling, and loc maintenance alongside master precision tapers."
+      "q": "Do you offer military or first responder discounts?",
+      "a": "Yes! We proudly offer discounted haircuts ($35) for active and retired military personnel as well as first responders."
     },
     {
       "q": "What payment methods are accepted?",

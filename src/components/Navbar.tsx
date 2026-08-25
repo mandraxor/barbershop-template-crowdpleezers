@@ -21,12 +21,12 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Top Status Bar */}
+      {/* Top Utility Bar */}
       <div className="border-b border-white/5 py-2 px-3 text-[10px] sm:text-[11px] font-mono tracking-wider text-[#94A3B8] bg-[#07090D] text-center overflow-hidden">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-1">
           <div className="flex items-center justify-center space-x-2 truncate">
             <span className="w-2 h-2 rounded-full bg-[#C5A059] animate-pulse shrink-0"></span>
-            <span className="truncate">{config.location.plaza} • {config.location.address}</span>
+            <span className="truncate">{config.location.plaza} • {config.location.address} • Walk-Ins Welcomed</span>
           </div>
           <a href={`tel:${config.shop.phoneRaw}`} className="hover:text-[#C5A059] flex items-center justify-center space-x-1 shrink-0 font-bold transition-colors">
             <Phone className="w-3 h-3 text-[#C5A059]" />
@@ -42,13 +42,13 @@ export default function Navbar() {
           {/* Logo Monogram */}
           <Link href="/" className="flex items-center space-x-3.5 group shrink-0">
             <div className="w-11 h-11 border border-[#C5A059]/60 bg-[#141824] flex items-center justify-center shadow-lg group-hover:border-[#C5A059] transition-all shrink-0">
-              <span className="font-serif font-black text-base text-[#DFBA68] tracking-tighter">CP</span>
+              <span className="font-serif font-black text-sm text-[#DFBA68] tracking-tighter">CHB</span>
             </div>
             <div>
-              <div className="font-serif font-bold text-sm sm:text-base tracking-[0.16em] text-[#F5F5F0] uppercase leading-none whitespace-nowrap">
-                CROWD PLEEZERS
+              <div className="font-serif font-bold text-sm sm:text-base tracking-[0.14em] text-[#F5F5F0] uppercase leading-none whitespace-nowrap">
+                CENTENNIAL HILLS
               </div>
-              <p className="text-[8px] sm:text-[9px] font-mono tracking-[0.22em] text-[#C5A059] uppercase mt-1 whitespace-nowrap font-medium">BARBERSHOP & BRAIDING • LV</p>
+              <p className="text-[8px] sm:text-[9px] font-mono tracking-[0.20em] text-[#C5A059] uppercase mt-1 whitespace-nowrap font-medium">BARBERSHOP • LAS VEGAS</p>
             </div>
           </Link>
 

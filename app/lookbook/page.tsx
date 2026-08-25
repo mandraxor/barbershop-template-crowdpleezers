@@ -29,7 +29,7 @@ export default function LookbookPage() {
           <div>
             <span className="text-[#C5A059] font-mono text-xs uppercase tracking-[0.25em] block mb-2 font-semibold">Photo Gallery</span>
             <h1 className="font-serif font-black text-3xl sm:text-6xl text-[#F5F5F0] uppercase tracking-tight break-words">The Lookbook</h1>
-            <p className="text-[#94A3B8] text-xs sm:text-sm font-sans mt-2">Captured live from the chairs at 4960 W Charleston Blvd.</p>
+            <p className="text-[#94A3B8] text-xs sm:text-sm font-sans mt-2">Captured live from the chairs at {config.location.address} in {config.location.plaza}.</p>
           </div>
           <a href={config.shop.booksyUrl} target="_blank" rel="noopener noreferrer" className="btn-brass-primary mt-6 md:mt-0 px-6 py-3 text-xs font-mono">
             Book Any Style

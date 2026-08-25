@@ -10,10 +10,10 @@ export default function Footer() {
         {/* Column 1: Brand & Philosophy */}
         <div className="space-y-4 md:col-span-1">
           <div className="flex items-center space-x-3">
-            <div className="w-9 h-9 border border-[#C5A059]/40 bg-[#141824] flex items-center justify-center text-[#DFBA68] font-serif font-bold text-sm">
-              CP
+            <div className="w-9 h-9 border border-[#C5A059]/40 bg-[#141824] flex items-center justify-center text-[#DFBA68] font-serif font-bold text-xs">
+              CHB
             </div>
-            <span className="font-serif font-bold text-[#F5F5F0] text-sm tracking-wider">CROWD PLEEZERS</span>
+            <span className="font-serif font-bold text-[#F5F5F0] text-sm tracking-wider">CENTENNIAL HILLS</span>
           </div>
           <p className="text-[#94A3B8] font-sans text-xs leading-relaxed font-normal">
             {config.shop.description}
@@ -57,7 +57,7 @@ export default function Footer() {
         {/* Column 4: Location & Contact */}
         <div>
           <h4 className="font-serif font-bold text-[#F5F5F0] text-xs uppercase tracking-[0.22em] mb-4 border-b border-white/10 pb-2">
-            Charleston Lounge
+            Centennial Lounge
           </h4>
           <p className="text-[#F5F5F0] font-medium">{config.location.plaza}</p>
           <p className="text-[#94A3B8]">{config.location.address}</p>
@@ -73,7 +73,7 @@ export default function Footer() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-8 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-[#94A3B8]">
-        <p>© {new Date().getFullYear()} Crowd Pleezers Barbershop. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Centennial Hills Barbershop. All rights reserved.</p>
         <p>{config.location.address}, {config.location.city}, {config.location.state} {config.location.zip} • {config.shop.phone}</p>
       </div>
     </footer>

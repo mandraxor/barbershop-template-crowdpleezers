@@ -4,7 +4,7 @@ import { FadeIn } from '@/components/MotionWrapper';
 
 export const metadata = {
   title: `Master Barbers Roster | ${config.shop.name}`,
-  description: `Meet our team of master barbers at ${config.shop.name} in Las Vegas: Mir The Barber, Major Fadez, Hairanesa, and Donscreationz.`,
+  description: `Meet our team of master barbers at ${config.shop.name} in Las Vegas: Lead Barber Kash, Marcus Vance, Anthony Cole, and Leo Reed.`,
 };
 
 export default function BarbersPage() {
@@ -15,7 +15,7 @@ export default function BarbersPage() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-[#C5A059] font-mono text-xs uppercase tracking-[0.25em] block mb-2 font-semibold">The Craftsmen</span>
           <h1 className="font-serif font-black text-3xl sm:text-6xl text-[#F5F5F0] uppercase tracking-tight break-words">Master Barbers Roster</h1>
-          <p className="text-[#94A3B8] text-xs sm:text-sm font-sans mt-3">Experienced craftsmen dedicated to precision haircuts, sharp beard line-ups, and protective braiding.</p>
+          <p className="text-[#94A3B8] text-xs sm:text-sm font-sans mt-3">Experienced master craftsmen dedicated to precision skin fades, sharp straight-razor detailing, and classic gentleman grooming.</p>
         </div>
       </FadeIn>
 

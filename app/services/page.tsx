@@ -4,7 +4,7 @@ import { FadeIn } from '@/components/MotionWrapper';
 
 export const metadata = {
   title: `Services & Pricing Menu | ${config.shop.name}`,
-  description: `Full categorized grooming menu at ${config.shop.name} in Las Vegas. Haircuts from $35, beard trims from $25, braiding from $65, hot towel shaves from $30.`,
+  description: `Full categorized grooming menu at ${config.shop.name} in Las Vegas. Haircuts from $35, beard trims from $30, kids cuts $35, hot towel shaves from $35.`,
 };
 
 export default function ServicesPage() {
@@ -16,7 +16,7 @@ export default function ServicesPage() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-[#C5A059] font-mono text-xs uppercase tracking-[0.25em] block mb-2 font-semibold">The Grooming Menu</span>
           <h1 className="font-serif font-black text-3xl sm:text-6xl text-[#F5F5F0] uppercase tracking-tight break-words">Services & Pricing</h1>
-          <p className="text-[#94A3B8] text-xs sm:text-sm font-sans mt-3">Multi-cultural haircuts, straight-razor detailing, and protective braiding styles.</p>
+          <p className="text-[#94A3B8] text-xs sm:text-sm font-sans mt-3">Precision skin fades, straight-razor detailing, beard sculpting, and kids cuts.</p>
         </div>
       </FadeIn>
 
