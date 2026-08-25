@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className="bg-[#0B0D13] text-[#F5F5F0] min-h-screen flex flex-col antialiased overflow-x-hidden selection:bg-[#C5A059] selection:text-[#0B0D13]">
         <Navbar />
-        <div className="flex-grow w-full max-w-full overflow-hidden">
+        <div className="flex-grow w-full max-w-full overflow-x-hidden">
           {children}
         </div>
         <Footer />
