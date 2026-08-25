@@ -64,7 +64,7 @@ export default function BarbersPage() {
                 href={barber.booksyUrl} 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="btn-brass-primary w-full py-2.5 text-xs text-center font-mono"
+                className="btn-brass-primary w-full py-3 min-h-[44px] flex items-center justify-center text-xs text-center font-mono"
               >
                 <Calendar className="w-3.5 h-3.5 mr-2" />
                 Book with {barber.name}

@@ -4,7 +4,7 @@ import config from '@/config/shop-config.json';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#07090D] border-t border-white/10 pt-16 pb-24 md:pb-12 text-[#94A3B8] text-xs font-mono w-full overflow-hidden">
+    <footer className="bg-[#07090D] border-t border-white/10 pt-16 pb-28 md:pb-12 text-[#94A3B8] text-xs font-mono w-full overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-8 grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
         
         {/* Column 1: Brand & Philosophy */}
@@ -25,7 +25,7 @@ export default function Footer() {
           <p className="text-[#94A3B8] font-sans text-xs leading-relaxed font-normal">
             {config.shop.description}
           </p>
-          <a href={config.shop.booksyUrl} target="_blank" rel="noopener noreferrer" className="inline-block text-[#C5A059] hover:underline font-bold">
+          <a href={config.shop.booksyUrl} target="_blank" rel="noopener noreferrer" className="inline-block text-[#C5A059] hover:underline font-bold min-h-[30px]">
             Book on Booksy →
           </a>
         </div>
@@ -36,12 +36,12 @@ export default function Footer() {
             Navigation
           </h4>
           <ul className="space-y-2.5">
-            <li><Link href="/" className="hover:text-[#C5A059] transition-colors">Home Page</Link></li>
-            <li><Link href="/services" className="hover:text-[#C5A059] transition-colors">Services & Pricing Menu</Link></li>
-            <li><Link href="/barbers" className="hover:text-[#C5A059] transition-colors">Master Barbers Roster</Link></li>
-            <li><Link href="/lookbook" className="hover:text-[#C5A059] transition-colors">Visual Photo Gallery</Link></li>
-            <li><Link href="/experience" className="hover:text-[#C5A059] transition-colors">The Lounge Experience</Link></li>
-            <li><Link href="/contact" className="hover:text-[#C5A059] transition-colors">Location & Hours</Link></li>
+            <li><Link href="/" className="hover:text-[#C5A059] transition-colors py-1 block">Home Page</Link></li>
+            <li><Link href="/services" className="hover:text-[#C5A059] transition-colors py-1 block">Services & Pricing Menu</Link></li>
+            <li><Link href="/barbers" className="hover:text-[#C5A059] transition-colors py-1 block">Master Barbers Roster</Link></li>
+            <li><Link href="/lookbook" className="hover:text-[#C5A059] transition-colors py-1 block">Visual Photo Gallery</Link></li>
+            <li><Link href="/experience" className="hover:text-[#C5A059] transition-colors py-1 block">The Lounge Experience</Link></li>
+            <li><Link href="/contact" className="hover:text-[#C5A059] transition-colors py-1 block">Location & Hours</Link></li>
           </ul>
         </div>
 
@@ -66,13 +66,32 @@ export default function Footer() {
           <h4 className="font-serif font-bold text-[#F5F5F0] text-xs uppercase tracking-[0.22em] mb-4 border-b border-white/10 pb-2">
             Centennial Lounge
           </h4>
-          <p className="text-[#F5F5F0] font-medium">{config.location.plaza}</p>
-          <p className="text-[#94A3B8]">{config.location.address}</p>
-          <p className="text-[#C5A059] text-[11px] mt-1">{config.location.crossStreet}</p>
-          <div className="mt-4 pt-3 border-t border-white/10">
-            <a href={`tel:${config.shop.phoneRaw}`} className="btn-brass-outline w-full py-2.5 text-xs">
+          <a 
+            href={config.location.googleMapsUrl} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="block group hover:text-[#C5A059] transition-colors"
+          >
+            <p className="text-[#F5F5F0] font-medium group-hover:text-[#C5A059] transition-colors">{config.location.plaza}</p>
+            <p className="text-[#94A3B8] group-hover:text-[#F5F5F0] transition-colors">{config.location.address}</p>
+            <p className="text-[#C5A059] text-[11px] mt-1 flex items-center">
+              <MapPin className="w-3 h-3 mr-1 inline shrink-0" />
+              {config.location.crossStreet}
+            </p>
+          </a>
+          <div className="mt-4 pt-3 border-t border-white/10 flex flex-col gap-2">
+            <a href={`tel:${config.shop.phoneRaw}`} className="btn-brass-outline w-full py-2.5 text-xs min-h-[44px] flex items-center justify-center">
               <Phone className="w-3.5 h-3.5 mr-2 text-[#C5A059]" />
               Call {config.shop.phone}
+            </a>
+            <a 
+              href={config.location.googleMapsUrl} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="btn-brass-outline w-full py-2.5 text-xs min-h-[44px] flex items-center justify-center"
+            >
+              <MapPin className="w-3.5 h-3.5 mr-2 text-[#C5A059]" />
+              Get Directions
             </a>
           </div>
         </div>
@@ -81,7 +100,15 @@ export default function Footer() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-8 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-[#94A3B8]">
         <p>© {new Date().getFullYear()} Centennial Hills Barbershop. All rights reserved.</p>
-        <p>{config.location.address}, {config.location.city}, {config.location.state} {config.location.zip} • {config.shop.phone}</p>
+        <p>
+          <a href={config.location.googleMapsUrl} target="_blank" rel="noopener noreferrer" className="hover:text-[#C5A059] transition-colors">
+            {config.location.address}, {config.location.city}, {config.location.state} {config.location.zip}
+          </a>
+          {' '}•{' '}
+          <a href={`tel:${config.shop.phoneRaw}`} className="hover:text-[#C5A059] transition-colors">
+            {config.shop.phone}
+          </a>
+        </p>
       </div>
     </footer>
   );

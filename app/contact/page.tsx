@@ -44,20 +44,32 @@ export default function ContactPage() {
           {/* Address Card */}
           <div className="border border-white/10 p-8 bg-[#07090D] space-y-6">
             <h2 className="font-serif text-2xl text-[#F5F5F0]">Lounge Address</h2>
-            <div className="space-y-2 font-mono text-xs">
-              <p className="text-[#F5F5F0] text-sm font-bold">{config.location.plaza}</p>
-              <p className="text-[#94A3B8]">{config.location.address}</p>
-              <p className="text-[#C5A059] text-[11px]">{config.location.crossStreet}</p>
-            </div>
+            <a 
+              href={config.location.googleMapsUrl} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="block space-y-2 font-mono text-xs group hover:text-[#C5A059] transition-colors"
+            >
+              <p className="text-[#F5F5F0] text-sm font-bold group-hover:text-[#C5A059] transition-colors">{config.location.plaza}</p>
+              <p className="text-[#94A3B8] group-hover:text-[#F5F5F0] transition-colors">{config.location.address}</p>
+              <p className="text-[#C5A059] text-[11px] flex items-center">
+                <MapPin className="w-3.5 h-3.5 mr-1 inline shrink-0" />
+                {config.location.crossStreet}
+              </p>
+            </a>
             <p className="text-xs text-[#94A3B8] font-sans leading-relaxed">
               {config.location.directions}
             </p>
             <div className="pt-4 border-t border-white/10 flex flex-col gap-3">
-              <a href={`tel:${config.shop.phoneRaw}`} className="btn-brass-outline w-full py-2.5 text-xs text-center font-mono">
+              <a href={`tel:${config.shop.phoneRaw}`} className="btn-brass-outline w-full py-3 min-h-[44px] flex items-center justify-center text-xs text-center font-mono">
                 <Phone className="w-3.5 h-3.5 mr-2 text-[#C5A059]" />
                 Call {config.shop.phone}
               </a>
-              <a href={config.shop.booksyUrl} target="_blank" rel="noreferrer" className="btn-brass-primary w-full py-2.5 text-xs text-center font-mono">
+              <a href={config.location.googleMapsUrl} target="_blank" rel="noopener noreferrer" className="btn-brass-outline w-full py-3 min-h-[44px] flex items-center justify-center text-xs text-center font-mono">
+                <MapPin className="w-3.5 h-3.5 mr-2 text-[#C5A059]" />
+                Get Directions (Google Maps)
+              </a>
+              <a href={config.shop.booksyUrl} target="_blank" rel="noreferrer" className="btn-brass-primary w-full py-3 min-h-[44px] flex items-center justify-center text-xs text-center font-mono">
                 <Calendar className="w-3.5 h-3.5 mr-2" />
                 Book Online (Booksy)
               </a>

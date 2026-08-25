@@ -27,12 +27,12 @@ export default function HomePage() {
         <div className="relative z-10 max-w-5xl mx-auto px-6 text-center flex flex-col items-center py-20">
           
           <FadeIn delay={0.1}>
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-8 border border-[#C5A059]/40 bg-[#0B0D13]/80 backdrop-blur-md">
+            <a href="https://maps.google.com/?q=6420+Sky+Pointe+Dr+%23120,+Las+Vegas,+NV+89131" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 mb-8 border border-[#C5A059]/40 bg-[#0B0D13]/80 backdrop-blur-md hover:border-[#C5A059] transition-all min-h-[44px]">
               <span className="w-2 h-2 rounded-full bg-[#C5A059] animate-pulse" />
               <span className="text-xs uppercase tracking-[0.25em] text-[#C5A059] font-mono font-semibold">
                 {config.location.plaza} • {config.location.address}
               </span>
-            </div>
+            </a>
           </FadeIn>
 
           <FadeIn delay={0.2}>
@@ -232,10 +232,11 @@ export default function HomePage() {
             Book your appointment online via Booksy 24/7 or walk right in to Centennial Crossroads Plaza in Northwest Las Vegas.
           </p>
           <div className="flex flex-wrap justify-center gap-4 pt-2">
-            <a href={config.shop.booksyUrl} target="_blank" rel="noreferrer" className="btn-brass-primary">
+            <a href={config.shop.booksyUrl} target="_blank" rel="noreferrer" className="btn-brass-primary min-h-[44px] flex items-center justify-center px-6 py-3 text-xs font-mono">
               Book Appointment on Booksy
             </a>
-            <a href={`tel:${config.shop.phoneRaw}`} className="btn-brass-outline">
+            <a href={`tel:${config.shop.phoneRaw}`} className="btn-brass-outline min-h-[44px] flex items-center justify-center px-6 py-3 text-xs font-mono">
+              <Phone className="w-3.5 h-3.5 mr-2 text-[#C5A059]" />
               Call {config.shop.phone}
             </a>
           </div>

@@ -61,10 +61,11 @@ export default function ServicesPage() {
         <h3 className="font-serif text-2xl sm:text-4xl text-[#F5F5F0]">Ready For An Impeccable Cut?</h3>
         <p className="text-sm text-[#94A3B8] font-sans max-w-xl mx-auto">Walk-ins welcomed daily. Bookings recommended to secure your preferred chair.</p>
         <div className="flex flex-wrap justify-center gap-4">
-          <a href={config.shop.booksyUrl} target="_blank" rel="noreferrer" className="btn-brass-primary">
+          <a href={config.shop.booksyUrl} target="_blank" rel="noreferrer" className="btn-brass-primary min-h-[44px] flex items-center justify-center px-6 py-3 text-xs font-mono">
             Reserve on Booksy
           </a>
-          <a href={`tel:${config.shop.phoneRaw}`} className="btn-brass-outline">
+          <a href={`tel:${config.shop.phoneRaw}`} className="btn-brass-outline min-h-[44px] flex items-center justify-center px-6 py-3 text-xs font-mono">
+            <Phone className="w-3.5 h-3.5 mr-2 text-[#C5A059]" />
             Call {config.shop.phone}
           </a>
         </div>

@@ -24,11 +24,19 @@ export default function Navbar() {
       {/* Top Utility Bar */}
       <div className="border-b border-white/5 py-2 px-3 text-[10px] sm:text-[11px] font-mono tracking-wider text-[#94A3B8] bg-[#07090D] text-center overflow-hidden">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-1">
-          <div className="flex items-center justify-center space-x-2 truncate">
+          <a 
+            href={config.location.googleMapsUrl} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="flex items-center justify-center space-x-2 truncate hover:text-[#C5A059] transition-colors"
+          >
             <span className="w-2 h-2 rounded-full bg-[#C5A059] animate-pulse shrink-0"></span>
             <span className="truncate">{config.location.plaza} • {config.location.address} • Walk-Ins Welcomed</span>
-          </div>
-          <a href={`tel:${config.shop.phoneRaw}`} className="hover:text-[#C5A059] flex items-center justify-center space-x-1 shrink-0 font-bold transition-colors">
+          </a>
+          <a 
+            href={`tel:${config.shop.phoneRaw}`} 
+            className="hover:text-[#C5A059] flex items-center justify-center space-x-1 shrink-0 font-bold transition-colors min-h-[30px]"
+          >
             <Phone className="w-3 h-3 text-[#C5A059]" />
             <span>{config.shop.phone}</span>
           </a>
@@ -40,7 +48,7 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-8 h-20 flex items-center justify-between gap-4">
           
           {/* Crowned CH Logo */}
-          <Link href="/" className="flex items-center space-x-3.5 group shrink-0">
+          <Link href="/" className="flex items-center space-x-3.5 group shrink-0 min-h-[44px]">
             <div className="w-11 h-11 border border-[#C5A059]/40 bg-[#141824]/90 flex items-center justify-center shadow-lg group-hover:border-[#C5A059] transition-all shrink-0 p-1">
               <img 
                 src="/assets/images/ch_logo_gold.png" 
@@ -64,7 +72,7 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`transition-colors py-1 relative ${
+                  className={`transition-colors py-2 relative min-h-[44px] flex items-center ${
                     isActive
                       ? 'text-[#C5A059] font-bold'
                       : 'text-[#94A3B8] hover:text-[#F5F5F0]'
@@ -81,7 +89,10 @@ export default function Navbar() {
 
           {/* Right Action CTAs */}
           <div className="flex items-center space-x-3 sm:space-x-4 shrink-0">
-            <a href={`tel:${config.shop.phoneRaw}`} className="hidden sm:inline-flex btn-brass-outline px-4 py-2 text-xs font-mono">
+            <a 
+              href={`tel:${config.shop.phoneRaw}`} 
+              className="hidden sm:inline-flex btn-brass-outline px-4 py-2.5 text-xs font-mono min-h-[44px] items-center"
+            >
               <Phone className="w-3.5 h-3.5 mr-2 text-[#C5A059]" />
               {config.shop.phone}
             </a>
@@ -89,7 +100,7 @@ export default function Navbar() {
               href={config.shop.booksyUrl} 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="btn-brass-primary px-4 sm:px-6 py-2.5 text-[11px] sm:text-xs font-mono"
+              className="btn-brass-primary px-4 sm:px-6 py-2.5 text-[11px] sm:text-xs font-mono min-h-[44px] items-center"
             >
               <Calendar className="w-3.5 h-3.5 mr-2" />
               Book Chair
@@ -98,7 +109,7 @@ export default function Navbar() {
             {/* Mobile Hamburger Toggle */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 text-gray-300 hover:text-white border border-white/10"
+              className="lg:hidden p-3 text-gray-300 hover:text-white border border-white/10 min-w-[44px] min-h-[44px] flex items-center justify-center"
               aria-label="Toggle menu"
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -117,7 +128,7 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`block py-2 ${
+                  className={`block py-3 min-h-[44px] flex items-center ${
                     isActive ? 'text-[#C5A059] font-bold pl-2 border-l-2 border-[#C5A059]' : 'text-gray-400 hover:text-white'
                   }`}
                 >
@@ -130,12 +141,24 @@ export default function Navbar() {
                 href={config.shop.booksyUrl} 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="btn-brass-primary w-full py-3 text-center text-xs"
+                className="btn-brass-primary w-full min-h-[44px] flex items-center justify-center text-xs"
               >
                 Book Appointment Online
               </a>
-              <a href={`tel:${config.shop.phoneRaw}`} className="btn-brass-outline w-full py-3 text-center text-xs">
+              <a 
+                href={`tel:${config.shop.phoneRaw}`} 
+                className="btn-brass-outline w-full min-h-[44px] flex items-center justify-center text-xs"
+              >
                 Call {config.shop.phone}
+              </a>
+              <a 
+                href={config.location.googleMapsUrl} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="btn-brass-outline w-full min-h-[44px] flex items-center justify-center text-xs"
+              >
+                <MapPin className="w-3.5 h-3.5 mr-2 text-[#C5A059]" />
+                Get Directions
               </a>
             </div>
           </div>
