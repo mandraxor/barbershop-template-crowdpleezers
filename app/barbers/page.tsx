@@ -4,7 +4,7 @@ import { FadeIn } from '@/components/MotionWrapper';
 
 export const metadata = {
   title: `Master Barbers Roster | ${config.shop.name}`,
-  description: `Meet our team of master barbers at ${config.shop.name} in Las Vegas: Lead Barber Kash, Marcus Vance, Anthony Cole, and Leo Reed.`,
+  description: `Meet our team of master barbers at ${config.shop.name} in Las Vegas: Lead Barber Kash and master chair craftsmen.`,
 };
 
 export default function BarbersPage() {

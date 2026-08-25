@@ -62,8 +62,8 @@
     {
       "id": "kash",
       "name": "Kash",
-      "title": "Lead Master Barber & Fade Architect",
-      "chair": "Chair 01",
+      "title": "Lead Barber & Fade Architect",
+      "chair": "Chair 01 (Lead)",
       "status": "Available",
       "experience": "10+ Years",
       "image": "/assets/images/barber-master.jpg",
@@ -72,29 +72,29 @@
         "Razor Lineups",
         "Beard Sculpting"
       ],
-      "bio": "Lead master barber renowned throughout Centennial Hills for surgical blend transitions, crisp razor line-ups, and unmatched client loyalty.",
+      "bio": "Lead master barber spotlighted across Northwest Las Vegas for flawless blend transitions, crisp surgical razor line-ups, and unmatched client loyalty.",
       "booksyUrl": "https://booksy.com/en-us/117961_centennial-hills-barbershop_barber-shop_29251_las-vegas"
     },
     {
-      "id": "marcus-vance",
-      "name": "Marcus 'Edge' Vance",
-      "title": "Master Barber & Beard Specialist",
+      "id": "chair-02",
+      "name": "Master Barber",
+      "title": "Senior Fade & Beard Specialist",
       "chair": "Chair 02",
       "status": "Available",
       "experience": "8+ Years",
       "image": "/assets/images/fade-textured.jpg",
       "specialties": [
-        "Low Tapers",
+        "Skin Tapers",
         "Hot Towel Shaves",
-        "Beard Grooming"
+        "Beard Sculpting"
       ],
-      "bio": "Specializes in high-contrast tapers, sculpted beard contours, and traditional hot lather straight-razor shave rituals.",
+      "bio": "Master chair craftsman specializing in high-contrast tapers, sculpted beard contours, and traditional hot lather straight-razor shave rituals.",
       "booksyUrl": "https://booksy.com/en-us/117961_centennial-hills-barbershop_barber-shop_29251_las-vegas"
     },
     {
-      "id": "anthony-cole",
-      "name": "Anthony 'Precision' Cole",
-      "title": "Senior Stylist & Classic Cut Specialist",
+      "id": "chair-03",
+      "name": "Senior Stylist",
+      "title": "Classic Cuts & Shears Specialist",
       "chair": "Chair 03",
       "status": "Available",
       "experience": "9+ Years",
@@ -104,23 +104,23 @@
         "Textured Crops",
         "Senior Grooming"
       ],
-      "bio": "Expert in shears craftsmanship, natural textured flow, executive comb-overs, and timeless gentleman's hairstyles.",
+      "bio": "Veteran shears artisan delivering natural textured flow, executive comb-overs, and timeless gentleman's grooming with meticulous precision.",
       "booksyUrl": "https://booksy.com/en-us/117961_centennial-hills-barbershop_barber-shop_29251_las-vegas"
     },
     {
-      "id": "leo-reed",
-      "name": "Leo 'Artisan' Reed",
-      "title": "Creative Hair Artist & Kids Specialist",
+      "id": "chair-04",
+      "name": "Resident Barber",
+      "title": "Kids & Precision Detailing",
       "chair": "Chair 04",
       "status": "Available",
       "experience": "7+ Years",
       "image": "/assets/images/hair-design.jpg",
       "specialties": [
-        "Custom Razor Parts",
-        "Kids Tapers",
+        "Kids Taper Fades",
+        "Razor Lineups",
         "Hair Art"
       ],
-      "bio": "Known for clean geometric razor designs, sharp parts, and patient, gentle precision cuts for young gentlemen.",
+      "bio": "Patient, gentle, and sharp precision specialist delivering crisp perimeter shape-ups and modern kids tapers for young gentlemen.",
       "booksyUrl": "https://booksy.com/en-us/117961_centennial-hills-barbershop_barber-shop_29251_las-vegas"
     }
   ],
@@ -130,126 +130,92 @@
       "description": "Tailored clipper fading, classic scissor silhouettes, and razor neck cleanup",
       "services": [
         {
+          "name": "Skin / Taper Fade",
+          "price": "from $45",
+          "duration": "35 min",
+          "popular": true,
+          "description": "Zero-gap foil shaver skin taper or drop fade, clean perimeter detailing, textured top work, and premium styling finish."
+        },
+        {
           "name": "Signature Haircut",
           "price": "from $35",
-          "duration": "40 min",
+          "duration": "30 min",
           "popular": true,
           "description": "Consultation, precision clipper or scissor cut tailored to head contours, hot lather razor neck cleanup, and styled finish."
         },
         {
-          "name": "Skin Fade & Taper",
-          "price": "from $45",
-          "duration": "45 min",
-          "popular": true,
-          "description": "Zero-gap foil shaver skin taper or drop fade, clean perimeter detailing, textured top work, and premium styling product."
-        },
-        {
-          "name": "Classic Scissor Cut",
-          "price": "from $35",
-          "duration": "40 min",
+          "name": "Kid's Taper Fade (No Skin)",
+          "price": "from $40",
+          "duration": "30 min",
           "popular": false,
-          "description": "All-scissor or comb-over styling for medium to long hair lengths, executive parts, and textured natural movement."
-        },
-        {
-          "name": "Military & First Responder Cut",
-          "price": "from $35",
-          "duration": "35 min",
-          "popular": false,
-          "description": "Discounted precision high & tight, regulation taper, or crew cut for active/retired military personnel and first responders."
+          "description": "Patient, gentle, and sharp haircut for young gentlemen. Clean taper fade without going down to the bare skin."
         }
       ]
     },
     {
-      "category": "Combos & Packages",
+      "category": "Combos & Shave Packages",
       "description": "Complete head and beard grooming packages for an all-inclusive finish",
       "services": [
         {
-          "name": "Haircut & Beard Sculpt",
+          "name": "Haircut & Beard Trim",
           "price": "from $65",
-          "duration": "55 min",
-          "popular": true,
-          "description": "Full signature haircut paired with hot towel beard shaping, crisp razor cheek/neckline definition, and nourishing beard oil."
-        },
-        {
-          "name": "Deluxe Cut & Hot Towel Shave",
-          "price": "from $70",
-          "duration": "60 min",
-          "popular": false,
-          "description": "Custom haircut combined with a full traditional hot lather double-pass straight-razor shave with essential oil steam."
-        },
-        {
-          "name": "New Client Cut & Beard Special",
-          "price": "from $40",
           "duration": "50 min",
           "popular": true,
-          "description": "First-visit promotional rate: Signature precision haircut combined with straight-razor beard cleanup and hot towel refresh."
-        }
-      ]
-    },
-    {
-      "category": "Beard & Shave Rituals",
-      "description": "Japanese steel double-pass precision and eucalyptus essential oil steam rituals",
-      "services": [
-        {
-          "name": "Beard Trim & Straight Razor Edge",
-          "price": "from $30",
-          "duration": "30 min",
-          "popular": false,
-          "description": "Hot lather straight-razor cheek & neckline edging, volumetric beard reduction, clipper shaping, and warm towel treatment."
+          "description": "Full signature haircut paired with hot towel beard shaping, crisp cheek/neckline definition ($70 with straight razor), and nourishing beard oil."
         },
         {
-          "name": "Hot Towel Straight Razor Shave",
+          "name": "Head Shave w/ Straight Razor",
           "price": "from $35",
           "duration": "35 min",
-          "popular": true,
-          "description": "Traditional double-pass straight-razor facial shave with warm essential oil steam, rich lather, and revitalizing aftershave balm."
-        },
-        {
-          "name": "Head Shave with Straight Razor",
-          "price": "from $35",
-          "duration": "30 min",
           "popular": false,
-          "description": "Complete scalp shave using Japanese surgical steel razors, warm lather, and soothing moisturizing scalp massage."
+          "description": "Complete scalp shave using Japanese surgical steel straight razor, warm rich lather, hot towel steam, and moisturizing scalp finish."
         }
       ]
     },
     {
-      "category": "Kids & Detailing",
-      "description": "Gentle precision styling for young gentlemen and perimeter maintenance",
+      "category": "Beard & Detailing Rituals",
+      "description": "Japanese steel double-pass precision and facial hair maintenance",
       "services": [
         {
-          "name": "Kid's Signature Cut (12 & Under)",
-          "price": "$35",
+          "name": "Beard Trim & Razor Clean",
+          "price": "from $30",
           "duration": "30 min",
-          "popular": false,
-          "description": "Patient, gentle, and sharp haircut for young gentlemen. Any modern style, skin taper, or design part."
+          "popular": true,
+          "description": "Hot lather straight-razor cheek & neckline edging, volumetric beard reduction, clipper shaping, and warm towel treatment ($35 full Beard Cleanup)."
         },
         {
-          "name": "Line Up / Shape Up",
+          "name": "Line Up & Edge",
           "price": "from $30",
           "duration": "20 min",
           "popular": false,
-          "description": "Crisp hairline perimeter detailing, temple cleanup, razor neck outlining, and aftershave tonic to refresh your existing cut."
-        },
-        {
-          "name": "Line Up with Color Enhancement",
-          "price": "from $35",
-          "duration": "25 min",
-          "popular": false,
-          "description": "Perimeter hairline lineup accentuated with professional semi-permanent organic color enhancements for high-definition contrast."
+          "description": "Crisp hairline perimeter detailing, temple cleanup, razor neck outlining, and aftershave tonic ($35 with color enhancements)."
         }
       ]
     },
     {
-      "category": "VIP Treatments",
-      "description": "The ultimate luxury barbershop grooming experience",
+      "category": "Appreciation & First Visit Specials",
+      "description": "Special introductory rates and discounts for community heroes",
       "services": [
         {
-          "name": "VIP Executive Experience",
-          "price": "from $80",
-          "duration": "75 min",
+          "name": "First Visit Special",
+          "price": "$40",
+          "duration": "45 min",
           "popular": true,
-          "description": "The ultimate service: Custom haircut, hot lather straight-razor shave/beard sculpt, eucalyptus hot towel, exfoliating face scrub, and scalp massage."
+          "description": "Special first-visit promotional package: Signature precision haircut combined with straight-razor beard cleanup and hot towel refresh."
+        },
+        {
+          "name": "Military Appreciation Cut",
+          "price": "$35",
+          "duration": "30 min",
+          "popular": false,
+          "description": "Discounted precision high & tight, regulation taper, or crew cut for active and retired military personnel."
+        },
+        {
+          "name": "First Responders Cut",
+          "price": "$35",
+          "duration": "30 min",
+          "popular": false,
+          "description": "Discounted signature haircut and razor neck cleanup for police, firefighters, EMTs, and healthcare workers."
         }
       ]
     }
@@ -269,7 +235,7 @@
       "categoryLabel": "Beards & Shaves",
       "title": "Sculpted Beard & Razor Line",
       "image": "/assets/images/low-taper-beard.jpg",
-      "barber": "Marcus Vance"
+      "barber": "Master Barber"
     },
     {
       "id": 3,
@@ -285,23 +251,23 @@
       "categoryLabel": "Hair Art",
       "title": "Custom Razor Part & Blend",
       "image": "/assets/images/hair-design.jpg",
-      "barber": "Leo Reed"
+      "barber": "Resident Barber"
     },
     {
       "id": 5,
       "category": "kids",
       "categoryLabel": "Kids",
-      "title": "Kids Clean Skin Taper",
+      "title": "Kids Clean Taper Fade",
       "image": "/assets/images/kids-cut.jpg",
-      "barber": "Leo Reed"
+      "barber": "Resident Barber"
     },
     {
       "id": 6,
       "category": "beards",
       "categoryLabel": "Beards & Shaves",
-      "title": "Straight Razor Hot Shave",
+      "title": "Straight Razor Head Shave",
       "image": "/assets/images/beard-shave.jpg",
-      "barber": "Marcus Vance"
+      "barber": "Senior Stylist"
     }
   ],
   "reviews": [
@@ -311,7 +277,7 @@
       "rating": 5,
       "date": "3 days ago",
       "text": "Kash is hands down the best barber in Northwest Las Vegas. Unmatched precision on skin fades and razor lineups. The shop is always clean and welcoming.",
-      "cut": "Skin Fade & Taper",
+      "cut": "Skin / Taper Fade",
       "barber": "Kash"
     },
     {
@@ -319,24 +285,24 @@
       "role": "Verified Client",
       "rating": 5,
       "date": "1 week ago",
-      "text": "Great vibe in Centennial Crossroads Plaza. Marcus hooked me up with a crisp beard trim and hot towel shave. Found my go-to shop in 89131.",
-      "cut": "Haircut & Beard Sculpt",
-      "barber": "Marcus Vance"
+      "text": "Great vibe in Centennial Crossroads Plaza. Got a crisp haircut & beard sculpt. Found my go-to shop in 89131.",
+      "cut": "Haircut & Beard Trim",
+      "barber": "Kash"
     },
     {
       "author": "Greg S.",
       "role": "Local Resident",
       "rating": 5,
       "date": "2 weeks ago",
-      "text": "Top tier barbershop in Centennial Hills. Professional service, fair prices, and great attention to detail. Leo was great with my son's cut too.",
+      "text": "Top tier barbershop in Centennial Hills. Professional service, fair prices, and great attention to detail. Great with my son's cut too.",
       "cut": "Signature Haircut",
-      "barber": "Anthony Cole"
+      "barber": "Kash"
     }
   ],
   "faqs": [
     {
       "q": "Do you accept walk-ins or are appointments required?",
-      "a": "Walk-ins are always welcomed daily during regular business hours! To guarantee immediate chair availability with Lead Barber Kash or your preferred barber, you can book online in advance via Booksy."
+      "a": "Walk-ins are always welcomed daily during regular business hours! To guarantee immediate chair availability with Lead Barber Kash or your preferred chair, you can book online in advance via Booksy."
     },
     {
       "q": "Where are you located and is there parking available?",
